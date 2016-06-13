@@ -1,2 +1,0 @@
-1. http://www.cnblogs.com/jifeng/archive/2012/12/05/2804129.html    //java应用调用系统的指令或者脚本文件  很强大
-http://my.oschina.net/fhd/blog/318723
