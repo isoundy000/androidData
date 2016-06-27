@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.RoundCardFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+        <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="wrap_content" app:placeholderImage="@drawable/bili_default_image_tv_12_16" app:placeholderImageScaleType="centerCrop" app:scaleViewType="fitWidth" app:aspectRadioWidth="3" app:aspectRadioHeight="4" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/layout_rank" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_rank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_bangumi_index_ranking" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/bangumi_index_text_white" android:layout_gravity="center" android:id="@id/tv_rank" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <android.support.v4.widget.Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@drawable/shape_shadow_bottom_top" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="@color/bangumi_index_text_white" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </tv.danmaku.bili.widget.RoundCardFrameLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/theme_color_text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:maxLines="2" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/gray_dark" android:id="@id/update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:singleLine="true" />
+</LinearLayout>

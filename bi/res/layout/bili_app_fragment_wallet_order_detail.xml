@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.App.WalletOrderDetailItem">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="订单号" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:gravity="center|right" android:id="@id/order_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:textIsSelectable="true" />
+        </LinearLayout>
+        <ImageView android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@color/theme_color_dividing_line" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.App.WalletOrderDetailItem">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="订单名称" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:gravity="center|right" android:id="@id/order_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ImageView android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@color/theme_color_dividing_line" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.App.WalletOrderDetailItem">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="创建时间" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:gravity="center|right" android:id="@id/create_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ImageView android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@color/theme_color_dividing_line" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.App.WalletOrderDetailItem">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="消费渠道" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:gravity="center|right" android:id="@id/channel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:id="@id/pay_status_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing" style="@style/Widget.App.WalletOrderDetailItem">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="支付状态" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:gravity="center|right" android:id="@id/pay_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ImageView android:id="@id/pay_status_divider" android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@color/theme_color_dividing_line" />
+        <LinearLayout android:id="@id/pay_money_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.App.WalletOrderDetailItem">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="支付金额" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:gravity="center|right" android:id="@id/pay_money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ImageView android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@color/theme_color_dividing_line" />
+        <LinearLayout android:id="@id/pay_bp_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.App.WalletOrderDetailItem">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:id="@id/pay_bp_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="支付B币" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:gravity="center|right" android:id="@id/pay_bp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <com.bilibili.multipletheme.widgets.TintButton android:textColor="@color/white" android:id="@id/button" android:background="@drawable/selector_button_solid_pink" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginTop="20.0dip" android:layout_marginRight="@dimen/item_spacing" android:layout_marginBottom="6.0dip" android:text="继续支付" />
+    </LinearLayout>
+</ScrollView>

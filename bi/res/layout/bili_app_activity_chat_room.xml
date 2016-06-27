@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bili_app_layout_navigation_top_bar" />
+    <ViewStub android:id="@id/status" android:layout="@layout/bili_app_layout_chat_room_status" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <tv.danmaku.bili.ui.feedback.FeedbackCommentBar android:id="@id/comment_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

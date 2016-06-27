@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bili_about_acknowledgement_boarder" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/app_brief" android:layout_width="fill_parent" style="@style/Staff" />
+            <TextView android:id="@id/extra_info" android:layout_width="fill_parent" style="@style/Staff" />
+            <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="反馈群:" android:layout_weight="1.0" style="@style/Staff" />
+                    <TextView android:gravity="center|left" android:layout_gravity="center|left" android:id="@id/feedback_qq_group" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="342220554" android:layout_weight="1.0" style="@style/Staff" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:gravity="center|right" android:layout_gravity="center|right" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="反馈论坛:" android:layout_weight="1.0" style="@style/Staff" />
+                    <TextView android:gravity="center|left" android:layout_gravity="center|left" android:id="@id/release_website" android:paddingLeft="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Staff" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="STAFF" style="@style/Staff" />
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="原案" style="@style/Staff" />
+        <TextView android:id="@id/bili_website" style="@style/Staff" />
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="企画" style="@style/Staff" />
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="⑨bishi" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="ruich97" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+        </TableLayout>
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="制作" style="@style/Staff" />
+        <TextView android:text="某科学的弹幕委员会" style="@style/Staff" />
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="作画监督" style="@style/Staff" />
+        <TextView android:text="Ray" style="@style/Staff" />
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="执行监督" style="@style/Staff" />
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="超燃" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Empty" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+        </TableLayout>
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="演出" style="@style/Staff" />
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="bbcallen" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="c跳" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="回老家结婚酱" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="yrom" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="yann" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="zccicy" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Crop" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="xqq" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="xyczero" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+        </TableLayout>
+        <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="特别感谢(排名不分先后)" style="@style/Staff" />
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="某暗" android:layout_weight="1.0" style="@style/Staff" />
+                <TextView android:gravity="center|left" android:layout_gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tiramisu" android:layout_weight="1.0" style="@style/Staff" />
+            </TableRow>
+        </TableLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/director" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="250.0dip" android:layout_marginBottom="250.0dip">
+            <TextView android:layout_marginTop="@dimen/staff_group_margin_top" android:text="监督" style="@style/Staff" />
+            <TextView android:text="ruich97" style="@style/Staff" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

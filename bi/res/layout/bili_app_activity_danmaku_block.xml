@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.bilibili.multipletheme.widgets.TintToolbar android:id="@id/nav_top_bar" android:layout_width="fill_parent" android:layout_height="?navigationTopBarSize" style="?attr/toolbarStyle">
+        <tv.danmaku.bili.widget.PagerSlidingTabStrip android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="fill_parent" app:pstsTabPaddingLeftRight="12.0dip" style="@style/Widget.App.SlidingTab.Top.NoBackground" />
+    </com.bilibili.multipletheme.widgets.TintToolbar>
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/bili_app_layout_view_pager" />
+</LinearLayout>

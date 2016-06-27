@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <tv.danmaku.bili.widget.ScalableImageView2 android:id="@id/img_not_login" android:layout_width="128.0dip" android:layout_height="wrap_content" android:src="@drawable/img_tips_error_not_loin" app:scaleViewType="fitWidth" app:aspectRadioWidth="128" app:aspectRadioHeight="108" />
+        <com.bilibili.multipletheme.widgets.TintButton android:textAppearance="@style/TextAppearance.App.Headline" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_login" android:background="@drawable/selector_button_solid_pink" android:layout_width="100.0dip" android:layout_height="40.0dip" android:layout_marginTop="16.0dip" android:text="@string/mycenter_login_text" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

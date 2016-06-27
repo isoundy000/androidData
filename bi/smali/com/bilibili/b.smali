@@ -1,0 +1,78 @@
+.class public final Lcom/bilibili/b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/bilibili/kp;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/bilibili/kp",
+        "<",
+        "Landroid/support/design/internal/ParcelableSparseArray;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 66
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/design/internal/ParcelableSparseArray;
+    .locals 1
+
+    .prologue
+    .line 70
+    new-instance v0, Landroid/support/design/internal/ParcelableSparseArray;
+
+    invoke-direct {v0, p1, p2}, Landroid/support/design/internal/ParcelableSparseArray;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    return-object v0
+.end method
+
+.method public bridge synthetic a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 66
+    invoke-virtual {p0, p1, p2}, Lcom/bilibili/b;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/design/internal/ParcelableSparseArray;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(I)[Landroid/support/design/internal/ParcelableSparseArray;
+    .locals 1
+
+    .prologue
+    .line 75
+    new-array v0, p1, [Landroid/support/design/internal/ParcelableSparseArray;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic a(I)[Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 66
+    invoke-virtual {p0, p1}, Lcom/bilibili/b;->a(I)[Landroid/support/design/internal/ParcelableSparseArray;
+
+    move-result-object v0
+
+    return-object v0
+.end method

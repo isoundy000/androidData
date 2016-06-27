@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.RoundCardFrameLayout android:orientation="vertical" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.ForegroundRelativeLayout android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/cover" android:layout_width="75.0dip" android:layout_height="75.0dip" app:placeholderImage="@drawable/bili_default_image_tv" app:placeholderImageScaleType="centerCrop" app:roundedCornerRadius="@dimen/group_cover_radius" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/item_spacing" android:layout_toLeftOf="@id/join" android:layout_toRightOf="@id/cover" android:layout_alignTop="@id/cover" android:layout_alignBottom="@id/cover">
+            <TextView android:textAppearance="@style/TextAppearance.App.XLarge" android:textColor="?android:textColorPrimary" android:gravity="bottom" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/gray_dark" android:gravity="top" android:id="@id/sub_title" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="6.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+    </tv.danmaku.bili.widget.ForegroundRelativeLayout>
+</tv.danmaku.bili.widget.RoundCardFrameLayout>

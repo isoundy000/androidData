@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/avatar_layout" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <tv.danmaku.bili.widget.CircleImageView android:id="@id/avatar" android:layout_width="42.0dip" android:layout_height="42.0dip" app:placeholderImage="@drawable/bili_default_avatar" app:roundAsCircle="true" app:roundingBorderWidth="0.5dip" app:roundingBorderColor="@color/gray_light" />
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" />
+        <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/gray_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="进入主页" android:drawableRight="@drawable/ic_light_gray_arrow_right" android:drawablePadding="4.0dip" />
+    </LinearLayout>
+    <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:paddingTop="@dimen/item_spacing" android:paddingBottom="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:ellipsize="end" android:gravity="bottom|center" android:id="@id/left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/item_half_spacing" />
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:ellipsize="end" android:gravity="bottom|center" android:id="@id/middle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/item_half_spacing" />
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:ellipsize="end" android:gravity="bottom|center" android:id="@id/right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/item_half_spacing" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.BLRelativeLayout android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/feedback_detail_show_totalnum_layout" android:paddingBottom="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:paddingRight="@dimen/item_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="相关回复" />
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorTertiary" android:id="@id/feedback_detail_show_totalnum" android:paddingRight="@dimen/item_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <tv.danmaku.bili.ui.feedback.widget.FeedbackItemInclude android:id="@id/item_include" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/feedback_detail_show_totalnum_layout" />
+</tv.danmaku.bili.widget.BLRelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/theme_color_window_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/bili_app_layout_view_pager" />
+    <RelativeLayout android:id="@id/bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/stub" android:layout="@layout/bili_app_fragment_search_filter" android:inflatedId="@id/filters" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tabs" />
+        <tv.danmaku.bili.widget.PagerSlidingTabStrip android:id="@id/tabs" android:background="@color/theme_color_window_background" android:paddingRight="?filterTabBarSize" android:layout_width="fill_parent" android:layout_height="?filterTabBarSize" app:pstsTabPaddingLeftRight="4.0dip" app:pstsShouldExpand="true" style="@style/Widget.App.SlidingTab" />
+        <com.bilibili.multipletheme.widgets.TintImageView android:id="@id/more" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="?filterTabBarSize" android:layout_height="?filterTabBarSize" android:src="@drawable/ic_filter" android:scaleType="centerInside" android:layout_alignParentRight="true" app:imageTint="@color/selector_image_filter_disable_gary" />
+        <View android:background="@drawable/shadow_top_dig" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/tabs" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70.0dip" android:src="@drawable/anim_search_loading" android:scaleType="centerInside" />
+</FrameLayout>

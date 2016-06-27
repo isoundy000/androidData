@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content_view" android:background="@color/theme_color_window_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:gravity="center_vertical" android:id="@id/desc" android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="@dimen/live_gift_panel_title_height" />
+            <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <tv.danmaku.bili.ui.live.room.gift.pkg.LivePackageHorizontalSelector android:id="@id/selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/item_half_spacing" />
+            <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/input_layout" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="@dimen/live_gift_panel_send_height">
+            <TextView android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/item_half_spacing" android:text="@string/live_prop_title_select_count" android:layout_weight="1.0" style="@style/TextAppearance.App.Title" />
+            <TextView android:gravity="center" android:id="@id/buy_num" android:background="@drawable/selector_button_gray_border_bg" android:paddingTop="@dimen/item_half_spacing" android:paddingBottom="@dimen/item_half_spacing" android:layout_width="96.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/item_half_spacing" android:minHeight="26.0dip" android:text="1" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/item_large_spacing" android:text="个" />
+            <com.bilibili.multipletheme.widgets.TintTextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/send" android:background="@drawable/selector_textview_liveroom_send" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="64.0dip" android:text="@string/handsel" />
+        </LinearLayout>
+    </LinearLayout>
+    <ViewStub android:layout_gravity="center" android:id="@id/error_tips_layout_stub" android:layout="@layout/bili_app_layout_vertical_player_error_tips" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/item_huge_spacing" />
+    <tv.danmaku.bili.widget.LoadingImageView android:layout_gravity="center" android:id="@id/loading" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/item_huge_spacing" />
+</FrameLayout>

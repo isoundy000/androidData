@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/title_scroll" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <com.bilibili.multipletheme.widgets.TintProgressBar android:id="@id/progress" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:indeterminate="true" android:layout_below="@id/title_scroll" app:progressTint="@color/theme_color_secondary" app:progressIndeterminateTint="@color/theme_color_secondary" style="?android:attr/progressBarStyleHorizontal" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textStyle="bold" android:id="@id/message" android:paddingLeft="@dimen/item_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progress" />
+    <TextView android:id="@id/progress_text" android:paddingRight="@dimen/item_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progress" android:layout_alignRight="@id/progress" />
+</RelativeLayout>

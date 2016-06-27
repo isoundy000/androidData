@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.ForegroundRelativeLayout android:orientation="vertical" android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:paddingTop="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" app:elevation="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/TextAppearance.App.Headline" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    <include layout="@layout/bili_app_layout_list_item_group_post_buttom_simple" />
+</tv.danmaku.bili.widget.ForegroundRelativeLayout>

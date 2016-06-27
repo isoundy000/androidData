@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?navigationTopBarSize" />
+    <com.bilibili.multipletheme.widgets.TintProgressBar android:id="@id/progress_horizontal" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginTop="?navigationTopBarSize" android:max="100" app:progressTint="@color/theme_color_secondary" app:progressIndeterminateTint="@color/theme_color_secondary" style="@style/Widget.App.ProgressBar.Horizontal" />
+    <com.bilibili.multipletheme.widgets.TintToolbar android:id="@id/nav_top_bar" android:layout_width="fill_parent" android:layout_height="?navigationTopBarSize" app:contentInsetStart="0.0dip" style="?attr/toolbarStyle" />
+</FrameLayout>

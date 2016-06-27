@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bili_app_layout_navigation_top_bar" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="@style/TextAppearance.App.XLarge" android:id="@id/desc_title" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bangumi_introduce_desc_title" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:id="@id/desc_content" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include layout="@layout/bili_app_layout_dividing" />
+            <TextView android:textAppearance="@style/TextAppearance.App.XLarge" android:id="@id/tags_title" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bangumi_introduce_tag_title" />
+            <tv.danmaku.bili.widget.TagsView android:id="@id/tags_content" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:spacing="@dimen/item_spacing" app:tagBackground="@drawable/selector_tag_gray" app:tagTextAppearance="@style/TextAppearance.App.Tagview.Gray.Title" xmlns:app="http://schemas.android.com/apk/res-auto" />
+            <include layout="@layout/bili_app_layout_dividing" />
+            <TextView android:textAppearance="@style/TextAppearance.App.XLarge" android:id="@id/staff_title" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bangumi_introduce_staff_title" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:id="@id/staff_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

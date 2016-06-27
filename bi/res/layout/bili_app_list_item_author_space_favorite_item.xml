@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.RoundCardFrameLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v4.widget.Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/white" android:gravity="bottom" android:id="@id/title" android:background="@drawable/shape_shadow_bottom_top" android:paddingLeft="@dimen/item_half_spacing" android:paddingRight="@dimen/item_half_spacing" android:paddingBottom="@dimen/item_half_spacing" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/TextAppearance.App.Small" android:textColor="@color/white" android:layout_gravity="center|right|top" android:id="@id/count" android:background="@drawable/shape_black_trans_round_background" android:paddingLeft="4.0dip" android:paddingTop="1.0dip" android:paddingRight="4.0dip" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" />
+    </FrameLayout>
+</tv.danmaku.bili.widget.RoundCardFrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/op_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Body" android:textColor="@color/gray_dark" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/from" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxEms="16" android:singleLine="true" />
+    <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Body" android:textColor="@color/gray_dark" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_dynamic_update_fmt" android:singleLine="true" />
+</LinearLayout>

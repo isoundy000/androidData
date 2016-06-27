@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/videos_layout" android:layout="@layout/bili_app_list_item_author_space_module_inc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/coin_videos_layout" android:layout="@layout/bili_app_list_item_author_space_module_inc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/favorite_layout" android:layout="@layout/bili_app_list_item_author_space_module_inc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/bangumi_layout" android:layout="@layout/bili_app_list_item_author_space_module_inc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/group_layout" android:layout="@layout/bili_app_list_item_author_space_module_inc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/game_layout" android:layout="@layout/bili_app_list_item_author_space_module_inc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <tv.danmaku.bili.widget.LoadingImageView android:layout_gravity="center_horizontal" android:id="@id/loading_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

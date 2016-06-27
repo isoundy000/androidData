@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.player.view.SidePannel android:orientation="vertical" android:background="@color/videoplay__control_panel_bkgd_new" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="280.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/Player_danmaku_options_pannel_title_danmaku_block" style="@style/PlayerOptionsPannelItemTitle" />
+            <tv.danmaku.player.view.CheckBoxGroup android:orientation="horizontal" android:id="@id/options_block_group" android:paddingTop="3.0dip" android:nextFocusUp="@id/close" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/option_block_top" android:nextFocusLeft="@id/option_block_colorful" android:layout_width="fill_parent" android:text="@string/Player_danmaku_options_pannel_options_title_block_top" android:drawableTop="@drawable/ic_btn_player_danmaku_options_block_top" android:layout_weight="1.0" style="@style/PlayerOptionsPannelItemCheckbox" />
+                <CheckBox android:id="@id/option_block_scroll" android:layout_width="fill_parent" android:text="@string/Player_danmaku_options_pannel_options_title_block_rl" android:drawableTop="@drawable/ic_btn_player_danmaku_options_block_rl" android:layout_weight="1.0" style="@style/PlayerOptionsPannelItemCheckbox" />
+                <CheckBox android:id="@id/option_block_bottom" android:layout_width="fill_parent" android:text="@string/Player_danmaku_options_pannel_options_title_block_bottom" android:drawableTop="@drawable/ic_btn_player_danmaku_options_block_bottom" android:layout_weight="1.0" style="@style/PlayerOptionsPannelItemCheckbox" />
+                <CheckBox android:id="@id/option_block_guest" android:layout_width="fill_parent" android:text="@string/Player_danmaku_options_pannel_options_title_block_tourist" android:drawableTop="@drawable/ic_btn_player_danmaku_options_block_tourist" android:layout_weight="1.0" style="@style/PlayerOptionsPannelItemCheckbox" />
+                <CheckBox android:id="@id/option_block_colorful" android:nextFocusRight="@id/option_block_top" android:layout_width="fill_parent" android:text="@string/Player_danmaku_options_pannel_options_title_block_colorful" android:drawableTop="@drawable/ic_btn_player_danmaku_options_block_colorful" android:layout_weight="1.0" style="@style/PlayerOptionsPannelItemCheckbox" />
+            </tv.danmaku.player.view.CheckBoxGroup>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="13.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/Player_danmaku_options_pannel_title_danmaku_duplicate_merging_enable" android:layout_weight="1.0" style="@style/PlayerOptionsPannelItemText" />
+                <include layout="@layout/danmaku_duplicate_merging_checkbox" />
+            </LinearLayout>
+            <TextView android:text="@string/Player_danmaku_options_pannel_title_danmaku_textsize" style="@style/PlayerOptionsPannelItemTitle" />
+            <tv.danmaku.player.view.LabelSeekbar android:orientation="horizontal" android:id="@id/option_danmaku_textsize" android:nextFocusUp="@id/options_block_group" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@id/textview_danmaku_stroke_width_scaling" android:text="@string/Player_danmaku_options_pannel_title_danmaku_stroke_width_scaling" style="@style/PlayerOptionsPannelItemTitle" />
+            <tv.danmaku.player.view.LabelSeekbar android:orientation="horizontal" android:id="@id/option_danmaku_stroke_width_scaling" android:nextFocusUp="@id/options_block_group" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:text="@string/Player_danmaku_options_pannel_title_danmaku_max_on_screen" style="@style/PlayerOptionsPannelItemTitle" />
+            <tv.danmaku.player.view.LabelSeekbar android:orientation="horizontal" android:id="@id/option_danmaku_max_on_screen" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:text="@string/Player_danmaku_options_pannel_title_danmaku_speed_factor" style="@style/PlayerOptionsPannelItemTitle" />
+            <tv.danmaku.player.view.LabelSeekbar android:orientation="horizontal" android:id="@id/option_danmaku_scroll_speed_factor" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:text="@string/Player_danmaku_options_pannel_title_danmaku_transparency" style="@style/PlayerOptionsPannelItemTitle" />
+            <tv.danmaku.player.view.LabelSeekbar android:orientation="horizontal" android:id="@id/option_danmaku_transparency" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</tv.danmaku.player.view.SidePannel>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/pink" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:gravity="center" android:id="@id/icon" android:layout_width="@dimen/notification_big_icon_width" android:layout_height="@dimen/notification_big_icon_height" android:scaleType="centerCrop" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/notification_info_container_padding_left" android:paddingBottom="@dimen/notification_info_container_padding_bottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_size_title" android:textColor="@android:color/white" android:id="@id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.App.TextView.Notification" />
+            <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@android:color/white" android:id="@id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.App.TextView.Notification" />
+        </LinearLayout>
+        <ImageButton android:id="@id/action1" style="@style/Widget.App.Button.NotificationAction.Collage" />
+        <ImageButton android:id="@id/action2" style="@style/Widget.App.Button.NotificationAction.Collage" />
+        <ImageButton android:id="@id/action3" style="@style/Widget.App.Button.NotificationAction.Collage" />
+        <ImageButton android:id="@id/stop" android:visibility="gone" android:layout_marginLeft="16.0dip" style="@style/Widget.App.Button.NotificationAction.Collage" />
+    </LinearLayout>
+</RelativeLayout>

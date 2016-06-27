@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/shadow" android:background="@drawable/shape_toolbar_gradient_shadow_reverse" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" />
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/seekbar_layout" android:background="@drawable/bili_player_control_background" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/play_pause_toggle" android:background="?selectableItemBackgroundBorderless" android:paddingLeft="@dimen/item_spacing" android:paddingRight="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bili_player_portrait_ctrl_play_pause" />
+        <Chronometer android:textSize="13.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/portrait_time_current_timer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/portrait_time_current" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <SeekBar android:id="@id/seekbar" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Widget.App.Seekbar.Pink" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/portrait_time_total" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/landscape_portrait_toggle" android:background="?selectableItemBackgroundBorderless" android:paddingLeft="5.0dip" android:paddingRight="@dimen/item_spacing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_portrait_fullscreen" />
+    </LinearLayout>
+</FrameLayout>

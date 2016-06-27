@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="114.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/pink" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/icon" android:layout_width="@dimen/notification_expanded_height" android:layout_height="@dimen/notification_expanded_height" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="?android:listDivider" android:layout_toRightOf="@id/icon" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:showDividers="middle" android:dividerPadding="@dimen/notification_expanded_buttons_divider_padding">
+        <ImageButton android:id="@id/action1" style="@style/Widget.App.Button.NotificationAction.Expand" />
+        <ImageButton android:id="@id/action2" style="@style/Widget.App.Button.NotificationAction.Expand" />
+        <ImageButton android:id="@id/action3" style="@style/Widget.App.Button.NotificationAction.Expand" />
+        <ImageButton android:id="@id/action4" style="@style/Widget.App.Button.NotificationAction.Expand" />
+    </LinearLayout>
+    <ImageView android:background="?android:dividerHorizontal" android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_toRightOf="@id/icon" android:layout_above="@id/panel" android:layout_alignParentRight="true" />
+    <ImageButton android:id="@id/stop" android:background="?android:selectableItemBackground" android:padding="@dimen/notification_expanded_collapse_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_notification_action_delete" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/notification_info_container_padding_left" android:paddingTop="@dimen/notification_expanded_content_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/stop" android:layout_toRightOf="@id/icon" android:layout_alignParentTop="true">
+        <TextView android:textSize="@dimen/text_size_title" android:textColor="@android:color/white" android:id="@id/text1" style="@style/Widget.App.TextView.Notification" />
+        <TextView android:textSize="@dimen/text_size_subtitle" android:textColor="@android:color/white" android:id="@id/text2" style="@style/Widget.App.TextView.Notification" />
+    </LinearLayout>
+</RelativeLayout>

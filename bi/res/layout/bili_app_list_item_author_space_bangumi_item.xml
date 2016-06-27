@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.RoundCardFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+        <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="wrap_content" app:placeholderImage="@drawable/bili_default_image_tv_12_16" app:placeholderImageScaleType="centerCrop" app:scaleViewType="fitWidth" app:aspectRadioWidth="3" app:aspectRadioHeight="4" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v4.widget.Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@drawable/shape_shadow_bottom_top" android:paddingLeft="@dimen/item_half_spacing" android:paddingRight="@dimen/item_half_spacing" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="食戟之灵" android:singleLine="true" />
+                <TextView android:textAppearance="@style/TextAppearance.App.Small" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/text1" android:paddingBottom="@dimen/item_half_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Small" android:textColor="@color/white" android:layout_gravity="right" android:id="@id/badge" android:background="@drawable/shape_rectangle_pink_trans" android:paddingLeft="6.0dip" android:paddingTop="4.0dip" android:paddingRight="6.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我和TA都在看" />
+    </FrameLayout>
+</tv.danmaku.bili.widget.RoundCardFrameLayout>

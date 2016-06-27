@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/layerlist_bili_charge_options_bg" />
+    <item android:drawable="@drawable/ic_battery_800" />
+</layer-list>

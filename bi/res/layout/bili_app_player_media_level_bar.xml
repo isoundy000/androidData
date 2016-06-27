@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:padding="8.0dip" android:focusable="false" android:focusableInTouchMode="false" android:fitsSystemWindows="true" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/volume_bar" android:background="#ff000000" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <ImageView android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_volume" android:contentDescription="@null" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/volume_level" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="30.0dip" android:layout_height="120.0dip" android:maxWidth="30.0dip" android:progressDrawable="@drawable/media_player_media_level" android:minWidth="30.0dip" android:thumb="@null" style="@style/Widget.App.Light.ProgressBar.Vertical" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/brightness_bar" android:background="#ff000000" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:fitsSystemWindows="true" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_brightness" android:contentDescription="@null" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/brightness_level" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="30.0dip" android:layout_height="120.0dip" android:maxWidth="30.0dip" android:progressDrawable="@drawable/media_player_media_level" android:minWidth="30.0dip" android:thumb="@null" style="@style/Widget.App.Light.ProgressBar.Vertical" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

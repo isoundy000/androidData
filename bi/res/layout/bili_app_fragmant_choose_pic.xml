@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/theme_color_window_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.danmaku.bili.widget.RecyclerView android:id="@id/item_recycleview" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:id="@id/choose_layout" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="?navigationTopBarSize">
+        <com.bilibili.multipletheme.widgets.TintButton android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/white" android:layout_gravity="center|left" android:id="@id/choose_preview_btn" android:background="@drawable/selector_button_solid_pink_disable_gray" android:layout_width="60.0dip" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/item_spacing" android:text="预览" />
+        <com.bilibili.multipletheme.widgets.TintButton android:id="@id/choose_source_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="35.0dip" />
+        <com.bilibili.multipletheme.widgets.TintButton android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/white" android:layout_gravity="center|right" android:id="@id/choose_ok_btn" android:background="@drawable/selector_button_solid_pink_disable_gray" android:paddingLeft="@dimen/item_half_spacing" android:paddingRight="@dimen/item_half_spacing" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginRight="@dimen/item_spacing" android:minWidth="60.0dip" />
+    </FrameLayout>
+</LinearLayout>

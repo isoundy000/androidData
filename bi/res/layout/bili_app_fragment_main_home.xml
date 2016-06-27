@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/coordinatorLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.bilibili.multipletheme.widgets.TintAppBarLayout android:id="@id/app_bar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/elevation">
+        <android.support.v7.widget.Toolbar android:id="@id/nav_top_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?navigationTopBarSize" app:elevation="0.0dip" app:layout_scrollFlags="enterAlways|scroll|snap" style="@style/Widget.App.Toolbar.Home">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/navigation" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_drawer_home" />
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <tv.danmaku.bili.widget.CircleImageView android:id="@id/avatar" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_marginLeft="14.0dip" android:layout_marginRight="4.0dip" style="@style/Widget.App.ImageView.Circle.Avatar" />
+                    <ImageView android:layout_gravity="center|right|top" android:id="@id/account_badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_avatar_answer_badge" />
+                    <ImageView android:layout_gravity="center|right|top" android:id="@id/notice_badge" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginRight="1.0dip" android:src="@drawable/shape_topbar_notice_badge" />
+                </FrameLayout>
+                <TextView android:textAppearance="@style/TextAppearance.App.Topbar.Title" android:id="@id/nick_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        <tv.danmaku.bili.widget.PagerSlidingTabStrip android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="40.0dip" app:pstsTabPaddingLeftRight="12.0dip" app:pstsShouldExpand="true" style="@style/Widget.App.SlidingTab.Top.NoBackground" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </com.bilibili.multipletheme.widgets.TintAppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

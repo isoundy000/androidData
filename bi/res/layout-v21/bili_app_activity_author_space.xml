@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/coordinatorLayout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/app_bar" android:background="@null" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:titleEnabled="false">
+            <include android:id="@id/author_info" layout="@layout/bili_app_layout_author_space_header" />
+            <com.bilibili.multipletheme.widgets.TintToolbar android:id="@id/nav_top_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?navigationTopBarSize" android:elevation="0.0dip" app:layout_collapseMode="pin" style="?attr/toolbarStyle" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <tv.danmaku.bili.widget.PagerSlidingTabStrip android:id="@id/tabs" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="40.0dip" android:elevation="2.0dip" app:pstsTabPaddingLeftRight="12.0dip" style="@style/Widget.App.SlidingTab" />
+        <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="40.0dip" />
+        <tv.danmaku.bili.widget.LoadingImageView android:layout_gravity="center_horizontal" android:id="@id/loading_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="120.0dip" />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bili_default_card_background" android:paddingBottom="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/community_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/bili_app_layout_section_dynamic_header" />
+    <include layout="@layout/bili_app_layout_recyclerview" />
+</LinearLayout>

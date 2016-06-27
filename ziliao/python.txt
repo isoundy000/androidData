@@ -1,0 +1,7 @@
+1. 合并路径
+    os.path.join(a,b)    # a = f:/test  b = test   join = f:/test/test
+  
+2. 检查文件是否存在
+	os.path.exists(file)
+	
+3. 异常

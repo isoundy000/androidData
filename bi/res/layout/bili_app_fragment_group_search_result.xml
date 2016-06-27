@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/theme_color_window_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/bili_app_layout_view_pager" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <tv.danmaku.bili.widget.PagerSlidingTabStrip android:textAppearance="@style/TextAppearance.App.Title" android:layout_gravity="center_vertical" android:id="@id/tabs" android:background="@color/theme_color_window_background" android:layout_width="0.0dip" android:layout_height="?filterTabBarSize" android:layout_weight="1.0" app:pstsTabPaddingLeftRight="4.0dip" app:pstsShouldExpand="true" style="@style/Widget.App.SlidingTab" />
+        <View android:background="@color/theme_color_window_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.bilibili.multipletheme.widgets.TintTextView android:gravity="center|right" android:layout_gravity="center|right" android:id="@id/sort_type_txt" android:background="?selectableItemBackground" android:padding="4.0dip" android:clickable="true" android:layout_width="100.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/activity_horizontal_margin" android:scaleType="centerInside" android:text="@string/search_order_relative" android:drawableRight="@drawable/ic_dropdown_grey" android:drawablePadding="4.0dip" app:drawableRightTint="@color/theme_color_text_primary" style="@style/TextAppearance.App.Subtitle" />
+    </LinearLayout>
+</FrameLayout>

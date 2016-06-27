@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.StaticImageView android:id="@id/image_item" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" app:placeholderImage="@drawable/bili_default_image_tv" app:failureImage="@drawable/bili_default_image_tv" />
+    <RelativeLayout android:id="@id/image_item_check_layout" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/image_item_check" android:background="@drawable/ic_unselected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

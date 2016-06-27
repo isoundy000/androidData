@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/theme_color_view_background" android:padding="@dimen/item_medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" layout="@layout/bili_app_fragment_game_detail_gift_item_remain_code" />
+    <include android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginBottom="7.0dip" layout="@layout/bili_app_fragment_game_detail_gift_item_content_scroll" />
+    <include android:id="@id/action" android:layout_width="fill_parent" android:layout_height="36.0dip" layout="@layout/bili_app_fragment_game_detail_gift_item_action_button" />
+</LinearLayout>

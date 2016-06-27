@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.GridLayout android:id="@id/grid" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="3" app:useDefaultMargins="false" />
+    <com.bilibili.multipletheme.widgets.TintEditText android:textColorHint="?editTextColor" android:gravity="center" android:id="@id/input" android:background="@drawable/selector_selection_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing" android:hint="@string/others" android:singleLine="true" android:maxLength="12" android:inputType="number" android:textCursorDrawable="@drawable/edittext_cursor" style="?attr/buttonStyle" />
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="16.0dip">
+        <com.bilibili.multipletheme.widgets.TintRadioButton android:textAppearance="@style/TextAppearance.App.Title" android:id="@id/radio_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:checked="true" android:text="封禁2天" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:compoundButtonTint="@color/selector_compoundbutton_normal" style="@style/Widget.App.RadioButton.Native" />
+        <com.bilibili.multipletheme.widgets.TintRadioButton android:textAppearance="@style/TextAppearance.App.Title" android:id="@id/radio_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginBottom="5.0dip" android:text="永久封禁" android:layout_toRightOf="@id/radio_1" android:layout_alignParentTop="true" app:compoundButtonTint="@color/selector_compoundbutton_normal" style="@style/Widget.App.RadioButton.Native" />
+    </RelativeLayout>
+    <com.bilibili.multipletheme.widgets.TintEditText android:id="@id/edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="16.0dip" android:lines="3" android:maxLength="200" style="@style/Widget.App.EditText.Default" />
+</LinearLayout>

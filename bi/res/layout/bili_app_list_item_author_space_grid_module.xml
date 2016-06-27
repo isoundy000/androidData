@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.danmaku.bili.ui.author.widget.AuthorItemHeader android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <GridLayout android:orientation="horizontal" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:columnCount="2" />
+</merge>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_service_qq" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="14.0dip" android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="12.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="游戏客服QQ" android:drawableTop="@drawable/ic_game_detail_service_qq" android:drawablePadding="6.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_qq_group" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="12.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QQ交流群" android:drawableTop="@drawable/ic_game_detail_qq_group" android:drawablePadding="6.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_game_forum" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="12.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="游戏论坛" android:drawableTop="@drawable/ic_game_detail_game_forum" android:drawablePadding="6.0dip" />
+    </FrameLayout>
+</LinearLayout>

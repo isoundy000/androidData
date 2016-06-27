@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="tv.danmaku.bili" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_ALL_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.autofocus" android:required="false"/>
+    <permission android:name="tv.danmaku.bili.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="tv.danmaku.bili.permission.MIPUSH_RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application android:allowBackup="true" android:fullBackupContent="@xml/backup_content" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="tv.danmaku.bili.MainApplication" android:supportsRtl="false" android:theme="@style/AppTheme">
+        <activity android:name="tv.danmaku.bili.ui.splash.SplashActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:exported="true" android:label="@string/app_name" android:name="tv.danmaku.bili.ui.IntentHandlerActivity" android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="space.bilibili.com" android:pathPattern=".*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="bilibili.kankanews.com" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="bilibili.tv" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="bilibili.cn" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="bilibili.com" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="www.bilibili.tv" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="www.bilibili.cn" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="www.bilibili.com" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="bilibili.smgbb.cn" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="m.acg.tv" android:pathPattern="/video/av.*" android:scheme="http"/>
+                <data android:host="www.bilibili.com" android:pathPattern="/mobile/video/av.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="live.bilibili.com" android:pathPattern="/live/*.html" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.bilibili.com" android:pathPattern="/bangumi/i/.*" android:scheme="http"/>
+                <data android:host="www.bilibili.com" android:pathPattern="/mobile/bangumi/i/.*" android:scheme="http"/>
+                <data android:host="bangumi.bilibili.com" android:pathPattern="/anime/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="bangumi.bilibili.com" android:pathPattern="/anime/category/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="bilibili.com" android:pathPattern="/sp/.*" android:scheme="http"/>
+                <data android:host="www.bilibili.com" android:pathPattern="/sp/.*" android:scheme="http"/>
+                <data android:host="bilibili.tv" android:pathPattern="/sp/.*" android:scheme="http"/>
+                <data android:host="www.bilibili.tv" android:pathPattern="/sp/.*" android:scheme="http"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="tv.danmaku.bili.MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.Home" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="tv.danmaku.bili.ui.category.CategoryPagerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+        <activity android:label="@string/mycenter_login_text" android:name="tv.danmaku.bili.ui.login.LoginActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/reset_password" android:name="tv.danmaku.bili.ui.account.reset.ResetPassActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/bind_phone" android:name="tv.danmaku.bili.ui.account.bind.BindPhoneActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.TranslucentWindow"/>
+        <activity android:label="@string/register" android:name="tv.danmaku.bili.ui.account.register.RegisterActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.TranslucentWindow" android:windowSoftInputMode="stateVisible"/>
+        <activity android:label="@string/register_user_agreement" android:name="tv.danmaku.bili.ui.account.register.RegisterAgreementActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.TranslucentWindow"/>
+        <activity android:exported="false" android:label="@string/title_game" android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.game.detail.GameDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="game" android:scheme="bilibili"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_game" android:name="tv.danmaku.bili.ui.game.main.GameCenterActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:label="@string/nav_notifications" android:name="tv.danmaku.bili.ui.game.message.GameMessageActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:label="@string/game_gift_center" android:name="tv.danmaku.bili.ui.game.gift.GameGiftCenterActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:label="@string/pay" android:name="tv.danmaku.bili.ui.pay.MPayActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="tv.danmaku.bili.ui.login.PlayerLoginActivity" android:screenOrientation="behind" android:theme="@style/AppTheme.NoActionBar.Transparent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.search.SearchActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="search" android:scheme="bilibili"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.author.AuthorRelationshipActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.StubSingleFragmentActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:exported="false" android:name="tv.danmaku.bili.ui.author.AuthorSpaceActivity" android:parentActivityName="tv.danmaku.bili.MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="author" android:scheme="bilibili"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.rank.RankPagerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.bangumi.index.BangumiIndexActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.pay.bangumi.BangumiPayRankActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="tv.danmaku.bili.ui.video.VideoDetailsActivity" android:parentActivityName="tv.danmaku.bili.MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Live.Detail" android:windowSoftInputMode="adjustNothing">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="abiliav"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="video" android:scheme="bilibili"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/label_sp" android:name="tv.danmaku.bili.ui.special.SpecialDetailActivity" android:parentActivityName="tv.danmaku.bili.MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="splist" android:scheme="bilibili"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.bangumi.BangumiCommentActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/title_bangumi_list" android:name="tv.danmaku.bili.ui.bangumi.BangumiListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:label="@string/title_follow_bangumi" android:name="tv.danmaku.bili.ui.bangumi.FollowBangumiListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:label="@string/title_follow_bangumi" android:name="tv.danmaku.bili.ui.bangumi.RecommendBangumiActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:label="@string/title_trading_record" android:name="tv.danmaku.bili.ui.wallet.bp.OrdersRecordActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="tv.danmaku.bili.ui.answer.AnswerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.answer.StartAnswerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="tv.danmaku.bili.ui.qrcode.QRcodeCaptureActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="tv.danmaku.bili.ui.CpuInfoActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.Dark.FullScreen"/>
+        <activity android:exported="true" android:name="tv.danmaku.bili.ui.videodownload.VideoDownloadListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/downloade_searchable"/>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+        </activity>
+        <activity android:exported="false" android:name="tv.danmaku.bili.ui.webview.MWebActivity" android:process=":web" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.webview.MPlayerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:configChanges="locale|fontScale|keyboard|keyboardHidden|layoutDirection|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:enabled="true" android:exported="true" android:label="@string/app_name" android:name="tv.danmaku.bili.ui.player.PlayerActivity" android:screenOrientation="landscape" android:theme="@style/AppTheme.NoActionBar.Dark.FullScreen">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+        </activity>
+        <activity android:label="@string/title_setting" android:name="tv.danmaku.bili.preferences.BiliPreferencesActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Preference"/>
+        <activity android:name="tv.danmaku.bili.ui.filechooser.FileChooserActivity" android:theme="@android:style/Theme.Holo.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.test.CDNTestActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:exported="false" android:name="tv.danmaku.bili.ui.live.area.LiveAreaActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/live_searchable"/>
+        </activity>
+        <activity android:exported="false" android:name="tv.danmaku.bili.ui.live.area.LiveAreaVideoListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/live_searchable"/>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.live.center.LiveExchangeSilverActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.live.search.LiveSearchActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/live_searchable"/>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.live.LiveAllActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/live_searchable"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/label_live" android:name="tv.danmaku.bili.ui.live.room.LiveRoomActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Live.Detail" android:windowSoftInputMode="adjustNothing">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="live" android:scheme="bilibili"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/live_searchable"/>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.live.room.LiveAnchorDescActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.live.center.LiveBuyVipActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.notification.NotificationsActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.LicenseActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.Dark.FullScreen"/>
+        <activity android:name="tv.danmaku.bili.ui.AboutActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.Dark.FullScreen"/>
+        <activity android:exported="true" android:name="tv.danmaku.bili.activities.login.SSOActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:exported="true" android:name="tv.danmaku.bili.ui.danmakufilter.DanmakuBlockActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:label="@string/pref_title_diagnostics" android:name="tv.danmaku.bili.ui.test.PingTestActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.feedback.FeedbackActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="tv.danmaku.bili.ui.bangumi.BangumiDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="bangumi" android:scheme="bilibili"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.bangumi.BangumiIntroduceActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.personinfo.PersonInfoActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="tv.danmaku.bili.ui.login.AutoLoginActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.TranslucentWindow"/>
+        <activity android:name="tv.danmaku.bili.ui.group.GroupStubSingleFragmentActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.group.apply.ApplyForGroupActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/title_group" android:name="tv.danmaku.bili.ui.group.main.GroupActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/group_searchable"/>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.group.main.GroupAllActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+        <activity android:name="tv.danmaku.bili.ui.group.ImagesViewerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.Dark.FullScreen" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="tv.danmaku.bili.ui.group.postdetail.PostDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.group.groupinfo.GroupInfoActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="tv.danmaku.bili.ui.group.community.CommunityDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+        <activity android:name="tv.danmaku.bili.ui.group.edit.PostEditorActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="tv.danmaku.bili.ui.notification.MyNotificationsActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="tv.danmaku.bili.ui.msg.ChatRoomActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/title_activity_choose_pic" android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.group.edit.ChoosePicActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:label="@string/title_activity_image_items_viewer" android:name="tv.danmaku.bili.ui.group.album.ImageItemsViewerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:enabled="true" android:exported="false" android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.appwall.AppWallActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.danmaku.bili.MainActivity"/>
+        </activity>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.group.main.GroupSearchActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/group_searchable"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.author.FavoriteSearchActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/myspace_favorite_searchable"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="tv.danmaku.bili.ui.author.FavoriteBoxVideosActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/myspace_favorite_searchable"/>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.pay.charge.ChargeAnimActivity" android:screenOrientation="portrait" android:theme="@style/ChargeAnimTheme"/>
+        <activity android:name="tv.danmaku.bili.ui.patriotism.PatriotismSwitchActivity" android:screenOrientation="portrait" android:theme="@style/PatriotismLoading">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="events" android:path="/626" android:scheme="bilibili"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="tv.danmaku.bili.ui.patriotism.PatriotismHomeActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.patriotism.PatriotismListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="tv.danmaku.bili.ui.patriotism.PatriotismSuccessActivity" android:screenOrientation="portrait" android:theme="@style/ChargeAnimTheme"/>
+        <activity android:name="tv.danmaku.bili.ui.patriotism.PatriotismLevelActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+        <provider android:authorities="tv.danmaku.bili.provider.StorageProvider" android:exported="false" android:name="tv.danmaku.bili.provider.StorageProvider"/>
+        <provider android:authorities="tv.danmaku.bili.provider.BiliSearchSuggestionProvider" android:exported="false" android:name="tv.danmaku.bili.provider.BiliSearchSuggestionProvider"/>
+        <provider android:authorities="tv.danmaku.bili.live.provider.SearchSuggestionsProvider" android:exported="false" android:name="tv.danmaku.bili.provider.BiliLiveSearchSuggestionProvider"/>
+        <provider android:authorities="tv.danmaku.bili.providers.BiliDataProvider" android:exported="true" android:name="tv.danmaku.bili.provider.BiliStatusProvider"/>
+        <provider android:authorities="tv.danmaku.bili.providers.VideoDownloadProvider" android:exported="false" android:name="tv.danmaku.bili.services.videodownload.VideoDownloadProvider" android:process=":download"/>
+        <provider android:authorities="tv.danmaku.bili.group.provider.SearchSuggestionsProvider" android:exported="false" android:name="tv.danmaku.bili.provider.BiliGroupSuggestionProvider"/>
+        <provider android:authorities="tv.danmaku.bili.provider.FavoriteSuggestionProvider" android:exported="false" android:name="tv.danmaku.bili.provider.FavoriteSuggestionProvider"/>
+        <provider android:authorities="tv.danmaku.bili.provider.BiliVideoDownloadSuggestionProvider" android:exported="false" android:name="tv.danmaku.bili.provider.BiliVideoDownloadSuggestionProvider"/>
+        <provider android:authorities="tv.danmaku.bili.preference.multiprocess" android:enabled="true" android:exported="false" android:multiprocess="false" android:name="tv.danmaku.bili.preferences.multiprocess.DefaultPreferencesProvider"/>
+        <service android:exported="false" android:name="tv.danmaku.bili.services.DataUpdateIntentService"/>
+        <receiver android:exported="true" android:name="tv.danmaku.bili.broadcast.WifiStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:label="@string/game_download_service" android:name="tv.danmaku.bili.services.apkdownload.service.DownloadService"/>
+        <service android:exported="false" android:label="@string/video_download_service" android:name="tv.danmaku.bili.services.videodownload.VideoDownloadService" android:process=":download"/>
+        <service android:exported="false" android:label="@string/video_music_service" android:name="tv.danmaku.bili.ui.player.notification.BackgroundMusicService"/>
+        <meta-data android:name="android.app.default_searchable" android:value="tv.danmaku.bili.ui.search.SearchActivity"/>
+        <activity android:name="com.umeng.fb.ConversationActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.umeng.fb.HelpActivity" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@style/AppTheme.AppCompat.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="tv.danmaku.bili.wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:launchMode="singleTop" android:name="tv.danmaku.bili.wxapi.WXPayEntryActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.AppCompat.Dialog"/>
+        <service android:name="com.umeng.update.net.DownloadingService" android:process=":download"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="4f81c63952701514c400006d"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="xxxxxxxxxxxxxxxx"/>
+        <receiver android:enabled="true" android:exported="false" android:name="tv.danmaku.bili.broadcast.NotificationReceiver">
+            <intent-filter>
+                <action android:name="tv.danmaku.bili.broadcast.NotificationReceiver.ACTION.OPEN_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="tv.danmaku.bili.ui.player.notification.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="tv.danmaku.player.screenshot.TrashScreenshot"/>
+        <service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice"/>
+        <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler"/>
+        <service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService"/>
+        <receiver android:exported="true" android:name="tv.danmaku.bili.broadcast.MessageReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="BILI_APP_WBID" android:value="2854077297"/>
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent100951776"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.bilibili.plugins.infoeyes.InfoEyeService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.bilibili.socialize.share.core.ui.QQAssistAdapterActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity-alias android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tencent.connect.common.AssistActivity" android:targetActivity="com.bilibili.socialize.share.core.ui.QQAssistAdapterActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.bilibili.socialize.share.core.ui.SinaAssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

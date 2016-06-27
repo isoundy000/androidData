@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="3.0dip" />
+            <padding android:left="@dimen/item_half_spacing" android:top="4.0dip" android:right="@dimen/item_half_spacing" android:bottom="4.0dip" />
+            <solid android:color="@color/theme_color_primary_trans" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape>
+            <corners android:radius="3.0dip" />
+            <stroke android:width="0.5dip" android:color="@color/theme_color_primary" />
+            <padding android:left="@dimen/item_half_spacing" android:top="4.0dip" android:right="@dimen/item_half_spacing" android:bottom="4.0dip" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="3.0dip" />
+            <stroke android:width="0.5dip" android:color="@color/gray_light" />
+            <padding android:left="@dimen/item_half_spacing" android:top="4.0dip" android:right="@dimen/item_half_spacing" android:bottom="4.0dip" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</selector>

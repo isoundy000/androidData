@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/error_layout" android:background="@color/theme_color_view_background" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/error_image" android:layout_width="160.0dip" android:layout_height="120.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/error_action_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:id="@id/error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.bilibili.multipletheme.widgets.TintButton android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/theme_color_view_background" android:gravity="center" android:id="@id/error_action" android:background="@drawable/selector_button_solid_pink" android:layout_width="78.0dip" android:layout_height="32.0dip" />
+    </LinearLayout>
+</LinearLayout>

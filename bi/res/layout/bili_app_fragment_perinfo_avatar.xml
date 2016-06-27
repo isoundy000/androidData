@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.App.XLarge" android:gravity="center" android:layout_width="fill_parent" android:layout_height="55.0dip" android:text="@string/person_info_avatar_title" />
+    <include layout="@layout/bili_app_layout_dividing" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/photo_take" android:background="@drawable/item_background" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_photo_take" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:gravity="center_horizontal" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/person_info_avatar_take" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/photo_choose" android:background="@drawable/item_background" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_photo_choose" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:gravity="center_horizontal" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/person_info_avatar_choose" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/photo_random" android:background="@drawable/item_background" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_photo_random" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:gravity="center_horizontal" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/person_info_avatar_random" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/bili_app_layout_dividing" />
+    <TextView android:textAppearance="@style/TextAppearance.App.XLarge" android:gravity="center" android:id="@id/photo_cancel" android:background="@drawable/item_background" android:layout_width="fill_parent" android:layout_height="55.0dip" android:text="@string/cancel" />
+</LinearLayout>

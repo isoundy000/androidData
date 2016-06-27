@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="-1.0dip" app:placeholderImage="@drawable/bili_default_image_tv" app:actualImageScaleType="centerCrop" app:aspectRadioWidth="2" app:aspectRadioHeight="1" />
+    <View android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-1.0dip" app:placeholderImage="@drawable/bili_default_image_tv" app:actualImageScaleType="centerCrop" app:aspectRadioWidth="2" app:aspectRadioHeight="1" />
+</merge>

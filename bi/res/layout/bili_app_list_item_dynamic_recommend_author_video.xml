@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.ForegroundRelativeLayout android:orientation="vertical" android:id="@id/author_video" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="wrap_content" app:placeholderImage="@drawable/bili_default_image_tv_16_10" app:placeholderImageScaleType="centerCrop" app:scaleViewType="fitWidth" app:aspectRadioWidth="16" app:aspectRadioHeight="10" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="?android:textColorSecondary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing" android:lines="2" android:layout_below="@id/cover" />
+</tv.danmaku.bili.widget.ForegroundRelativeLayout>

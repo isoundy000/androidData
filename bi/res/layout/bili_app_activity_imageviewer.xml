@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/image_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.image2.ImageGallery android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="4.0dip" />
+    <ImageView android:id="@id/blank_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:layout_gravity="left" android:id="@id/back_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.bilibili.multipletheme.widgets.TintImageView android:textAppearance="@style/TextAppearance.App.Topbar.Title" android:id="@id/back" android:background="@drawable/shape_black_trans_round_background" android:padding="4.0dip" android:layout_width="35.0dip" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginTop="@dimen/item_half_spacing" android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" app:imageTint="@color/white" />
+    </RelativeLayout>
+    <TextView android:textAppearance="@style/TextAppearance.App.Topbar.Title" android:layout_gravity="center_horizontal" android:id="@id/title" android:background="@drawable/shape_black_trans_round_background" android:paddingLeft="@dimen/item_spacing" android:paddingTop="@dimen/item_half_spacing" android:paddingRight="@dimen/item_spacing" android:paddingBottom="@dimen/item_half_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_half_spacing" />
+    <View android:layout_gravity="bottom" android:background="@drawable/shape_gradient_black" android:layout_width="fill_parent" android:layout_height="80.0dip" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/btn_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/item_spacing">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Button" android:gravity="center" android:id="@id/image_raw" android:background="@drawable/shape_round_gray_border_bg" android:visibility="gone" android:layout_width="54.0dip" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/item_spacing" android:text="原图" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Button" android:gravity="center" android:id="@id/save" android:background="@drawable/shape_round_gray_border_bg" android:layout_width="54.0dip" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/item_spacing" android:text="@string/person_info_save" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Button" android:gravity="center" android:id="@id/share" android:background="@drawable/shape_round_gray_border_bg" android:layout_width="54.0dip" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/item_spacing" android:text="@string/share" />
+        <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

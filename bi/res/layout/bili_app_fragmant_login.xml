@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.ui.login.ResizeLayout android:orientation="vertical" android:id="@id/root_layout" android:background="@color/theme_color_window_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/tips_layout" android:background="@color/theme_color_window_background" android:layout_width="fill_parent" android:layout_height="@dimen/login_tips_height">
+                <ImageView android:id="@id/bili_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_bili_logo" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/ic_22" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_22" android:scaleType="fitStart" android:layout_toLeftOf="@id/bili_logo" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+                <ImageView android:id="@id/ic_33" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_33" android:scaleType="fitEnd" android:layout_toRightOf="@id/bili_logo" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <include layout="@layout/bili_app_layout_login_username" />
+            <include layout="@layout/bili_app_layout_login_password" />
+            <include layout="@layout/bili_app_layout_login_action_button" />
+        </LinearLayout>
+    </ScrollView>
+</tv.danmaku.bili.ui.login.ResizeLayout>

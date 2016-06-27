@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="player_danmaku_padding_bottom_live_vertical_fullscreen">128.0dip</dimen>
+    <item type="dimen" name="dialog_width_major">65.0%</item>
+    <item type="dimen" name="dialog_width_minor">65.0%</item>
+    <dimen name="live_gift_corner">4.0dip</dimen>
+    <dimen name="activity_horizontal_margin">64.0dip</dimen>
+</resources>

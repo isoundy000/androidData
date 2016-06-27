@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="65.0dip" android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/icon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/item_medium_spacing" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="@dimen/item_medium_spacing" android:singleLine="true" android:layout_toRightOf="@id/icon" />
+    <ImageView android:id="@id/image_code" android:background="@drawable/ic_game_detail_gift_code" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/icon" android:layout_below="@id/name" />
+    <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:singleLine="true" android:layout_toRightOf="@id/image_code" android:layout_below="@id/name" />
+    <FrameLayout android:id="@id/copy" android:visibility="invisible" android:layout_width="55.0dip" android:layout_height="30.0dip" android:layout_marginRight="@dimen/item_medium_spacing" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="14.0sp" android:textColor="@color/theme_color_secondary" android:layout_gravity="center" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="复制" />
+    </FrameLayout>
+    <ImageView android:id="@id/overdue_code" android:background="@drawable/ic_game_detail_overdue" android:visibility="invisible" android:layout_width="95.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <View android:background="@color/theme_color_window_background" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/item_medium_spacing" android:layout_marginRight="@dimen/item_medium_spacing" android:layout_alignParentBottom="true" />
+</RelativeLayout>

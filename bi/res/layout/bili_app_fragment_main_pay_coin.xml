@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bilibili.multipletheme.widgets.TintRelativeLayout android:background="@color/theme_color_view_background" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="160.0dip">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:id="@id/order_record" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="交易记录" android:drawableRight="@drawable/ic_light_gray_arrow_right" android:drawablePadding="6.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <com.bilibili.multipletheme.widgets.TintTextView android:textSize="40.0sp" android:textColor="?android:textColorPrimary" android:gravity="center_vertical" android:id="@id/coin_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/item_half_spacing" android:singleLine="true" android:drawableLeft="@drawable/ic_gray_coin" android:drawablePadding="@dimen/item_spacing" android:layout_toLeftOf="@id/order_record" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/gray_dark" android:id="@id/title" android:paddingBottom="@dimen/item_half_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip" android:text="硬币余额" android:layout_above="@id/coin_num" />
+        </com.bilibili.multipletheme.widgets.TintRelativeLayout>
+        <com.bilibili.multipletheme.widgets.TintTextView android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

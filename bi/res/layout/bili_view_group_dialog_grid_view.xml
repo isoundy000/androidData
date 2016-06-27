@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/grid_view_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:id="@id/grid_view_left_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/theme_color_secondary" android:id="@id/grid_view_right_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="right" android:minEms="2" android:layout_toRightOf="@id/grid_view_left_txt" android:layout_centerVertical="true" />
+    <com.bilibili.multipletheme.widgets.TintImageView android:id="@id/grid_view_checked_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/ic_selected_white" android:layout_toRightOf="@id/grid_view_right_txt" android:layout_centerVertical="true" app:imageTint="@color/theme_color_secondary" />
+</RelativeLayout>

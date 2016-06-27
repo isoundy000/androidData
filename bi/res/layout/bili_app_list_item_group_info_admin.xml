@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/item_large_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.CircleImageView android:id="@id/image" android:layout_width="@dimen/avatar_medium_width" android:layout_height="@dimen/avatar_medium_width" app:placeholderImage="@drawable/bili_default_avatar" app:roundAsCircle="true" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:ellipsize="end" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_half_spacing" android:singleLine="true" />
+</LinearLayout>

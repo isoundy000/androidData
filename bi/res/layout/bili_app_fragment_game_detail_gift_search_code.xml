@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/theme_color_view_background" android:padding="@dimen/item_medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip">
+        <tv.danmaku.bili.widget.ScalableImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="54.0dip" android:layout_height="54.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_medium_spacing">
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textSize="14.0sp" android:textColor="?android:textColorTertiary" android:id="@id/num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textSize="12.0sp" android:textColor="?android:textColorTertiary" android:id="@id/title_click" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/game_gift_click_code_to_copy" />
+    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@id/code1" android:layout_width="0.0dip" android:layout_height="30.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@id/code2" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginLeft="8.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_medium_spacing">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@id/code3" android:layout_width="0.0dip" android:layout_height="30.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@id/code4" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginLeft="8.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_medium_spacing">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@id/code5" android:layout_width="0.0dip" android:layout_height="30.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/refresh_view" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginLeft="8.0dip" android:layout_weight="1.0">
+            <com.bilibili.multipletheme.widgets.TintImageView android:id="@id/refresh_image_view" android:background="@drawable/ic_game_detail_gift_refresh" android:layout_width="16.0dip" android:layout_height="16.0dip" />
+            <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Title" android:textSize="16.0sp" android:textColor="@color/theme_color_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:text="@string/game_gift_search_change" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginTop="@dimen/item_medium_spacing" android:layout_marginBottom="@dimen/item_medium_spacing" layout="@layout/bili_app_fragment_game_detail_gift_item_content_scroll" />
+    <include android:id="@id/action" android:layout_width="fill_parent" android:layout_height="36.0dip" layout="@layout/bili_app_fragment_game_detail_gift_item_action_button" />
+</LinearLayout>

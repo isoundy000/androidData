@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.ForegroundRelativeLayout android:id="@id/coin_layout" android:background="@color/theme_color_card" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_marginTop="@dimen/item_spacing" android:foreground="?selectableItemBackground">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/space_privacy_coin_videos" android:layout_centerVertical="true" />
+        <android.support.v7.widget.SwitchCompat android:enabled="false" android:id="@id/coin_video_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </tv.danmaku.bili.widget.ForegroundRelativeLayout>
+    <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <tv.danmaku.bili.widget.ForegroundRelativeLayout android:id="@id/bangumi_layout" android:background="@color/theme_color_card" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="55.0dip" android:foreground="?selectableItemBackground">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/space_privacy_bangumis" android:layout_centerVertical="true" />
+        <android.support.v7.widget.SwitchCompat android:enabled="false" android:id="@id/bangumi_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </tv.danmaku.bili.widget.ForegroundRelativeLayout>
+    <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <tv.danmaku.bili.widget.ForegroundRelativeLayout android:id="@id/favorite_layout" android:background="@color/theme_color_card" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="55.0dip" android:foreground="?selectableItemBackground">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/space_privacy_favorite" android:layout_centerVertical="true" />
+        <android.support.v7.widget.SwitchCompat android:enabled="false" android:id="@id/favorite_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </tv.danmaku.bili.widget.ForegroundRelativeLayout>
+    <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <tv.danmaku.bili.widget.ForegroundRelativeLayout android:id="@id/group_layout" android:background="@color/theme_color_card" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="55.0dip" android:foreground="?selectableItemBackground">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/space_privacy_group" android:layout_centerVertical="true" />
+        <android.support.v7.widget.SwitchCompat android:enabled="false" android:id="@id/group_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </tv.danmaku.bili.widget.ForegroundRelativeLayout>
+    <View android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <tv.danmaku.bili.widget.ForegroundRelativeLayout android:id="@id/game_layout" android:background="@color/theme_color_card" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="55.0dip" android:foreground="?selectableItemBackground" app:elevation="2.0dip">
+        <TextView android:textAppearance="@style/TextAppearance.App.Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/space_privacy_game" android:layout_centerVertical="true" />
+        <android.support.v7.widget.SwitchCompat android:enabled="false" android:id="@id/game_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </tv.danmaku.bili.widget.ForegroundRelativeLayout>
+</LinearLayout>

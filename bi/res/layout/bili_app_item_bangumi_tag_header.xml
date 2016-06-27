@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginTop="0.0dip" android:layout_marginBottom="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <tv.danmaku.bili.widget.RoundCardFrameLayout android:id="@id/button_index" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:background="@color/bangumi_index_entry_all" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackgroundBorderless">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_bangumi_index" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_bangumi_index_text" />
+        </LinearLayout>
+    </tv.danmaku.bili.widget.RoundCardFrameLayout>
+    <android.support.v4.widget.Space android:layout_width="8.0dip" android:layout_height="0.0dip" />
+    <tv.danmaku.bili.widget.RoundCardFrameLayout android:id="@id/button_rank" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:background="@color/bangumi_index_entry_rank" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackgroundBorderless">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_bangumi_rank" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_bangumi_rank_text" />
+        </LinearLayout>
+    </tv.danmaku.bili.widget.RoundCardFrameLayout>
+    <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" />
+</LinearLayout>

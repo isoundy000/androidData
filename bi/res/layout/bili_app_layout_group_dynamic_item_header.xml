@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.CircleImageView android:id="@id/avatar" android:layout_width="20.0dip" android:layout_height="20.0dip" app:placeholderImage="@drawable/bili_default_avatar" app:roundAsCircle="true" app:roundingBorderWidth="0.5dip" app:roundingBorderColor="@color/gray_light" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/gray_dark" android:gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" />
+    <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Body" android:textColor="@color/gray_dark" android:ellipsize="end" android:gravity="center" android:id="@id/comments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:singleLine="true" android:drawableLeft="@drawable/ic_comment_grey" android:drawablePadding="4.0dip" />
+</LinearLayout>

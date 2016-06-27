@@ -1,0 +1,53 @@
+.class public Lcom/bilibili/ie;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/media/MediaBrowserServiceCompat$d;
+
+.field final synthetic a:Landroid/support/v4/os/ResultReceiver;
+
+.field final synthetic a:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat$d;Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;)V
+    .locals 0
+
+    .prologue
+    .line 277
+    iput-object p1, p0, Lcom/bilibili/ie;->a:Landroid/support/v4/media/MediaBrowserServiceCompat$d;
+
+    iput-object p2, p0, Lcom/bilibili/ie;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/bilibili/ie;->a:Landroid/support/v4/os/ResultReceiver;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 3
+
+    .prologue
+    .line 280
+    iget-object v0, p0, Lcom/bilibili/ie;->a:Landroid/support/v4/media/MediaBrowserServiceCompat$d;
+
+    iget-object v0, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$d;->a:Landroid/support/v4/media/MediaBrowserServiceCompat;
+
+    iget-object v1, p0, Lcom/bilibili/ie;->a:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/bilibili/ie;->a:Landroid/support/v4/os/ResultReceiver;
+
+    invoke-static {v0, v1, v2}, Landroid/support/v4/media/MediaBrowserServiceCompat;->a(Landroid/support/v4/media/MediaBrowserServiceCompat;Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;)V
+
+    .line 281
+    return-void
+.end method

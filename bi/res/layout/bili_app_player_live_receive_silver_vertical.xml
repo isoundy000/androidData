@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/item_large_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_horizontal" android:id="@id/timer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="13.0dip" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:contentDescription="@null" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff666666" android:gravity="center_horizontal" android:id="@id/desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:lineSpacingExtra="8.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="#fffb7299" android:layout_gravity="end" android:id="@id/confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/live_props_receive_known" />
+</LinearLayout>

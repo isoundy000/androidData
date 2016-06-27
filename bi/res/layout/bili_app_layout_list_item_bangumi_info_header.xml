@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.ForegroundRelativeLayout android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackgroundBorderless"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Small" android:textColor="@color/white_lighter" android:gravity="center" android:id="@id/badge" android:background="@drawable/selector_textview_solid_pink_round" android:padding="2.0dip" android:layout_width="36.0dip" android:layout_height="24.0dip" android:text="@string/bangumi_header" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Title" android:gravity="center_vertical" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_half_spacing" android:drawableRight="@drawable/ic_gray_arrow_right" android:layout_toRightOf="@id/badge" android:layout_centerVertical="true" />
+</tv.danmaku.bili.widget.ForegroundRelativeLayout>

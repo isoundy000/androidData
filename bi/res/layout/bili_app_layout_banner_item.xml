@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackgroundBorderless"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.StaticImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" app:viewAspectRatio="3.2" app:placeholderImage="@drawable/bili_default_image_tv" app:placeholderImageScaleType="centerInside" />
+    <ViewStub android:id="@id/error_layout" android:layout="@layout/bili_app_layout_banner_error" android:inflatedId="@id/error_layout_inflate" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

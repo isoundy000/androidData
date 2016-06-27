@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tv.danmaku.bili.widget.ScalableImageView android:layout_gravity="center" android:id="@id/image" android:background="@color/white" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layout_below="@id/title" app:scaleViewType="fitWidth" />
+    <FrameLayout android:background="#ffe9e9e9" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/gray_dark" android:gravity="center" android:layout_gravity="center" android:id="@id/desc" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/snapshot_saving_prepare_text" style="@style/TextAppearance.App.Medium" />
+        <android.support.v7.widget.GridLayout android:gravity="center" android:id="@id/panel" android:visibility="gone" android:layoutAnimation="@anim/fade_in_layout_anim" android:layout_width="fill_parent" android:layout_height="wrap_content" app:orientation="vertical" app:columnCount="3">
+            <Button android:id="@id/btn_share_to_weibo" android:text="@string/bili_socialize_text_sina_key" android:drawableTop="@mipmap/ic_share_weibo" android:contentDescription="@null" app:layout_row="0" app:layout_column="0" app:layout_columnWeight="1.0" app:layout_gravity="fill" style="@style/PlayerShareBarButtonWithText" />
+            <Button android:id="@id/btn_share_to_wechat" android:text="@string/bili_socialize_text_weixin_key" android:drawableTop="@mipmap/ic_share_wechat" android:contentDescription="@null" app:layout_row="0" app:layout_column="1" app:layout_columnWeight="1.0" app:layout_gravity="fill" style="@style/PlayerShareBarButtonWithText" />
+            <Button android:id="@id/btn_share_to_wechat_moments" android:text="@string/bili_socialize_text_weixin_circle_key" android:drawableTop="@mipmap/ic_share_wechat_moments" android:contentDescription="@null" app:layout_row="0" app:layout_column="2" app:layout_columnWeight="1.0" app:layout_gravity="fill" style="@style/PlayerShareBarButtonWithText" />
+            <Button android:id="@id/btn_share_to_qq" android:text="@string/bili_socialize_text_qq_key" android:drawableTop="@mipmap/ic_share_qq" android:contentDescription="@null" app:layout_row="1" app:layout_column="0" app:layout_columnWeight="1.0" app:layout_gravity="fill" style="@style/PlayerShareBarButtonWithText" />
+            <Button android:id="@id/btn_share_to_qzone" android:text="@string/bili_socialize_text_qq_zone_key" android:drawableTop="@mipmap/ic_share_qzone" android:contentDescription="@null" app:layout_row="1" app:layout_column="1" app:layout_columnWeight="1.0" app:layout_gravity="fill" style="@style/PlayerShareBarButtonWithText" />
+        </android.support.v7.widget.GridLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            <Button android:gravity="center" android:id="@id/save" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/snapshot_save_to_local" android:drawableTop="@mipmap/ic_save_screen_shot" android:layout_weight="1.0" android:contentDescription="@null" style="@style/PlayerShareBarButtonWithText" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

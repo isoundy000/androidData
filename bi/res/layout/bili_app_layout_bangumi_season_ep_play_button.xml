@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.ForegroundRelativeLayout android:orientation="horizontal" android:background="@drawable/ic_bangumi_ep_item_background" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginRight="@dimen/item_spacing" android:minHeight="36.0dip" app:backgroundTint="@color/selector_bangumi_pressed_gary" app:backgroundTintMode="multiply"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_medium" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    <com.bilibili.multipletheme.widgets.TintTextView android:textSize="@dimen/text_size_medium" android:textColor="@color/theme_color_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="继续播放" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</tv.danmaku.bili.widget.ForegroundRelativeLayout>

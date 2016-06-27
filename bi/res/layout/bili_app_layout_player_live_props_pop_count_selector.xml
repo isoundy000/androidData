@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/selection3" android:checked="true" android:text="1" style="@style/Widget.App.Button.Border" />
+    <TextView android:id="@id/selection4" android:layout_marginLeft="@dimen/item_spacing" android:text="5" style="@style/Widget.App.Button.Border" />
+    <TextView android:id="@id/selection5" android:layout_marginLeft="@dimen/item_spacing" android:text="10" style="@style/Widget.App.Button.Border" />
+    <TextView android:id="@id/selection6" android:layout_marginLeft="@dimen/item_spacing" android:text="50" style="@style/Widget.App.Button.Border" />
+    <TextView android:id="@id/selection7" android:layout_marginLeft="@dimen/item_spacing" android:text="100" style="@style/Widget.App.Button.Border" />
+    <TextView android:id="@id/selection8" android:layout_marginLeft="@dimen/item_spacing" android:text="450" style="@style/Widget.App.Button.Border" />
+    <EditText android:textColorHint="@android:color/white" android:id="@id/selection9" android:layout_marginLeft="@dimen/item_spacing" android:hint="@string/others" android:maxLength="5" android:inputType="number" style="@style/Widget.App.Button.Border" />
+</merge>

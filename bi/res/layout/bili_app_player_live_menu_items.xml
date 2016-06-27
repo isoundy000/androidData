@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/videoplay__control_panel_bkgd_new" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@null"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/live_menu_item_share" android:focusable="true" android:text="@string/share" style="@style/PlayerOptionsMenuItem" />
+    <View style="@style/CommonUnderline" />
+    <TextView android:id="@id/live_menu_item_report" android:focusable="true" android:text="@string/report" style="@style/PlayerOptionsMenuItem" />
+</LinearLayout>

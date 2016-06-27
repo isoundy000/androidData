@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bilibili.multipletheme.widgets.TintTextView android:textSize="14.0sp" android:textColor="@color/theme_color_secondary" android:gravity="center" android:background="@drawable/bg_bangumi_index_button" android:layout_width="80.0dip" android:layout_height="30.0dip" android:foreground="?selectableItemBackgroundBorderless" android:text="@string/bangumi_index_reset" />
+</RelativeLayout>

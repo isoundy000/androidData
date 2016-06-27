@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.bilibili.multipletheme.widgets.TintAppBarLayout android:id="@id/app_bar" android:background="@color/theme_color_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/elevation">
+        <com.bilibili.multipletheme.widgets.TintToolbar android:id="@id/nav_top_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?navigationTopBarSize" android:elevation="0.0dip" app:elevation="0.0dip" app:layout_scrollFlags="enterAlways|scroll|snap" style="@style/Widget.App.Toolbar" />
+        <tv.danmaku.bili.widget.PagerSlidingTabStrip android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="40.0dip" app:pstsTabPaddingLeftRight="12.0dip" app:pstsShouldExpand="true" style="@style/Widget.App.SlidingTab.Top.NoBackground" />
+    </com.bilibili.multipletheme.widgets.TintAppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

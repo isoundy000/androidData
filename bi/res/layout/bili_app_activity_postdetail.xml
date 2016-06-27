@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/bili_app_layout_navigation_top_bar" />
+    <FrameLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?navigationTopBarSize" />
+    <tv.danmaku.bili.widget.fab.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/send_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/item_large_spacing" android:src="@drawable/ic_group_send_msg" app:fab_colorNormal="@color/theme_color_secondary" app:fab_colorPressed="@color/pink_dark" app:fab_colorRipple="@color/gray_trans" app:fab_showShadow="true" app:fab_size="normal" app:fab_elevationCompat="2.0dip" />
+</android.support.design.widget.CoordinatorLayout>

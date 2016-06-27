@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="blc_device_hdp">0</integer>
+    <integer name="abc_max_action_buttons">2</integer>
+    <integer name="config_danmaku_fly_duration">6000</integer>
+    <integer name="config_danmaku_large_character_per_column">10</integer>
+    <integer name="config_danmaku_max_danmaku_on_screen">20</integer>
+    <integer name="bangumi_lane_size">3</integer>
+    <integer name="bangumi_section_span_count">2</integer>
+    <integer name="bangumi_tag_span_count">3</integer>
+    <integer name="design_snackbar_text_max_lines">2</integer>
+    <integer name="emotion_span_count">4</integer>
+    <integer name="newyear_danmaku_screen_size">120</integer>
+    <integer name="search_text_max_lines">2</integer>
+    <integer name="category_section_total_span_count">2</integer>
+    <integer name="blc_device_wdp">0</integer>
+    <integer name="DefPrefValue_ChoosePlayMode">0</integer>
+    <integer name="DefPrefValue_ChooseVideoQuality">0</integer>
+    <integer name="DefPrefValue_VlcSurfaceRender">0</integer>
+    <integer name="abc_config_activityDefaultDur">220</integer>
+    <integer name="abc_config_activityShortDur">150</integer>
+    <integer name="author_video_item_horizontal_count">2</integer>
+    <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="medal_has_set_vertical_offset">10242233</integer>
+    <integer name="menu_live_center">0x7fff004e</integer>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+    <integer name="tag_key_hide">0x2222</integer>
+</resources>

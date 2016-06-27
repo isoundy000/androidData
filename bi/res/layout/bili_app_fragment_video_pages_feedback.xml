@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootview" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/feedback_list_fragment" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/comment_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="?navigationBottomBarSize">
+            <com.bilibili.multipletheme.widgets.TintImageView android:id="@id/emotion" android:background="?selectableItemBackgroundBorderless" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/ic_emoji" android:scaleType="centerInside" app:imageTint="@color/theme_color_secondary" />
+            <TextView android:textAppearance="@style/TextAppearance.App.Title" android:gravity="center_vertical" android:background="@drawable/ic_edit_text_default" android:paddingLeft="5.0dip" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="1.0dip" android:minHeight="40.0dip" android:hint="@string/feedback_hit_comment" android:maxLines="4" android:maxLength="1000" android:layout_weight="1.0" />
+            <ImageButton android:id="@id/send" android:background="?selectableItemBackgroundBorderless" android:layout_width="40.0dip" android:layout_height="36.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="2.0dip" android:src="@drawable/ic_send_grey" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

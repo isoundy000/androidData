@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.RoundCardFrameLayout android:background="@drawable/bangumi_index_background" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?selectableItemBackgroundBorderless">
+        <ImageView android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bangumi_index_text" android:scaleType="centerInside" android:contentDescription="@string/bangumi_index" />
+    </FrameLayout>
+</tv.danmaku.bili.widget.RoundCardFrameLayout>

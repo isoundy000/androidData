@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <tv.danmaku.bili.widget.RoundCardFrameLayout android:id="@android:id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <FrameLayout android:background="@color/yellow_dark" android:layout_width="fill_parent" android:layout_height="48.0dip" android:foreground="?selectableItemBackgroundBorderless">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v4.widget.Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="34.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_following_bangumi" />
+                <android.support.v4.widget.Space android:layout_width="@dimen/item_spacing" android:layout_height="wrap_content" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="追  番" />
+                <android.support.v4.widget.Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+        </FrameLayout>
+    </tv.danmaku.bili.widget.RoundCardFrameLayout>
+    <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="0.0dip" />
+    <tv.danmaku.bili.widget.RoundCardFrameLayout android:id="@android:id/button2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <FrameLayout android:background="@color/red_light" android:layout_width="fill_parent" android:layout_height="48.0dip" android:foreground="?selectableItemBackgroundBorderless">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="放送表" android:drawablePadding="@dimen/item_spacing" />
+        </FrameLayout>
+    </tv.danmaku.bili.widget.RoundCardFrameLayout>
+    <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="0.0dip" />
+    <tv.danmaku.bili.widget.RoundCardFrameLayout android:id="@android:id/button3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <FrameLayout android:background="@color/blue_light" android:layout_width="fill_parent" android:layout_height="48.0dip" android:foreground="?selectableItemBackgroundBorderless">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="索  引" android:drawableLeft="@drawable/ic_bangumi_category" android:drawablePadding="@dimen/item_spacing" />
+        </FrameLayout>
+    </tv.danmaku.bili.widget.RoundCardFrameLayout>
+</LinearLayout>

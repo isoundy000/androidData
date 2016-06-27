@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/item_spacing" android:paddingTop="2.0dip" android:paddingRight="@dimen/item_large_spacing" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:scaleType="centerInside" />
+        <tv.danmaku.bili.widget.text.MeasurableMinWidthTextView android:textAppearance="@style/TextAppearance.App.Medium" android:textColor="@color/theme_color_secondary" android:gravity="center" android:layout_gravity="center" android:id="@id/rank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" app:staffText="99999" />
+    </FrameLayout>
+    <tv.danmaku.bili.widget.text.MeasurableMinWidthTextView android:textAppearance="@style/TextAppearance.App.Medium" android:ellipsize="end" android:id="@id/num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawableLeft="@drawable/ic_rank_seeds" android:drawablePadding="@dimen/item_half_spacing" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:staffText="990000fuck" />
+    <TextView android:textAppearance="@style/TextAppearance.App.Medium" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginRight="@dimen/item_large_spacing" android:singleLine="true" android:layout_toLeftOf="@id/coin_num" android:layout_toRightOf="@id/layout" android:layout_centerVertical="true" />
+</RelativeLayout>

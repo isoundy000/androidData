@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.danmaku.bili.widget.RevealFrameLayout android:orientation="vertical" android:id="@id/search_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/shadow" android:background="@color/black_trans" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="end" android:orientation="vertical" android:id="@id/search_suggestion_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip">
+        <include layout="@layout/bili_app_layout_search_suggestions_top_layout" />
+        <View android:id="@id/divider" android:background="@color/theme_color_dividing_line" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:layout_marginBottom="-1.0dip" />
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:isScrollContainer="true" />
+    </LinearLayout>
+</tv.danmaku.bili.widget.RevealFrameLayout>

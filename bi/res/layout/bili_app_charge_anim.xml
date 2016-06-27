@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/bright" android:layout_width="0.0dip" android:layout_height="0.0dip" android:src="@drawable/top_charge_bright" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/cancel" android:padding="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/ic_notification_action_delete" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/fire" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/top_charge_fire" android:scaleType="centerCrop" android:layout_alignParentBottom="true" />
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="50.0dip" android:layout_above="@id/bottom">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/name" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerHorizontal="true" />
+            <tv.danmaku.bili.widget.CircleImageView android:id="@id/avatar" android:background="@drawable/top_charge_avatar_outer" android:padding="3.0dip" android:layout_width="66.0dip" android:layout_height="66.0dip" android:layout_marginTop="12.0dip" android:layout_below="@id/name" android:layout_centerHorizontal="true" fresco:placeholderImage="@drawable/bili_default_avatar" fresco:actualImageScaleType="fitCenter" />
+            <ImageView android:id="@id/rank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="60.0dip" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/figure" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/top_charge_figure" android:adjustViewBounds="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/video_name" android:background="@drawable/charge_anim_video_name" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:singleLine="true" />
+        </LinearLayout>
+        <ViewStub android:id="@id/stub_snow_view" android:layout="@layout/bili_layout_charge_anim" android:inflatedId="@id/snow_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</FrameLayout>

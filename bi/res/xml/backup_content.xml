@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="root" path="download" />
+    <exclude domain="root" path="app_upgrade" />
+    <exclude domain="root" path="app_upgrade.upd" />
+    <exclude domain="sharedpref" path="environment_prefs.xml" />
+    <exclude domain="sharedpref" path="mipush.xml" />
+    <exclude domain="sharedpref" path="mipush_extra.xml" />
+    <exclude domain="sharedpref" path="answer.xml" />
+    <exclude domain="sharedpref" path="multi_theme2.xml" />
+    <exclude domain="sharedpref" path="feedback_push.xml" />
+    <exclude domain="file" path="log" />
+    <exclude domain="file" path="splash" />
+    <exclude domain="file" path=".um" />
+    <exclude domain="file" path="data" />
+    <exclude domain="file" path="lua-base" />
+    <exclude domain="file" path="lua-bili" />
+</full-backup-content>

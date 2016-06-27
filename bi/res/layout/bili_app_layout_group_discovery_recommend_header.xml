@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?selectableItemBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_half_spacing" android:layout_marginBottom="@dimen/item_half_spacing" android:minHeight="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_group_recommend_header" android:scaleType="fitStart" android:layout_centerVertical="true" />
+    <TextView android:id="@id/title" android:paddingTop="@dimen/item_half_spacing" android:paddingRight="@dimen/item_half_spacing" android:paddingBottom="@dimen/item_half_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="分类推荐" android:singleLine="true" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" style="@style/TextAppearance.App.Title" />
+</RelativeLayout>
