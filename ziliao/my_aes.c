@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+#include "aes.h"
 
 static unsigned char sBox[] =
 { /*  0    1    2    3    4    5    6    7    8    9    a    b    c    d    e    f */
@@ -41,6 +40,9 @@ static unsigned char invsBox[256] =
     0x17,0x2b,0x04,0x7e,0xba,0x77,0xd6,0x26,0xe1,0x69,0x14,0x63,0x55,0x21,0x0c,0x7d  /*f*/
 }; 
 
+
+
+//============================================aes encoding======================================================
 /**
 * S box
 * replace the promary data
@@ -116,7 +118,7 @@ unsigned char FFmul(unsigned char a, unsigned char data){
 	}
 	//this place i don't understand
 	for(i = 0 ; i < 4; i++){
-		if((a << 1) & 0x01){
+		if((a >> i) & 0x01){
 			ret = ret ^ temp[i];
 		}
 	}
@@ -134,7 +136,7 @@ void addRoundKey(unsigned char data[][4], unsigned char temp[][4]){
 	
 	for(i = 0 ; i < 4; i++){
 		for(j = 0; j < 4; j++){
-			data[i][j] = data[i][j] ^ temp[i][j];
+			data[j][i] = data[j][i] ^ temp[j][i];
 		}
 	}
 }
@@ -146,6 +148,7 @@ void keyExpansion(unsigned char *key, unsigned char w[][4][4]){
 
     int i,j,r,c;
     unsigned char rc[] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36};
+    //put the primary key into the w[0]
     for(r=0; r<4; r++)
     {
         for(c=0; c<4; c++)
@@ -153,6 +156,7 @@ void keyExpansion(unsigned char *key, unsigned char w[][4][4]){
             w[0][r][c] = key[r+c*4];
         }
     }
+
     for(i=1; i<=10; i++)
     {
         for(j=0; j<4; j++)
@@ -167,9 +171,9 @@ void keyExpansion(unsigned char *key, unsigned char w[][4][4]){
                 unsigned char temp = t[0];
                 for(r=0; r<3; r++)
                 {
-                    t[r] = Sbox[t[(r+1)%4]];
+                    t[r] = sBox[t[(r+1)%4]];
                 }
-                t[3] = Sbox[temp];
+                t[3] = sBox[temp];
                 t[0] ^= rc[i-1];
             }
             for(r=0; r<4; r++)
@@ -177,6 +181,7 @@ void keyExpansion(unsigned char *key, unsigned char w[][4][4]){
                 w[i][r][j] = w[i-1][r][j] ^ t[r];
             }
         }
+      }
 }
 
 /**
@@ -185,41 +190,151 @@ void keyExpansion(unsigned char *key, unsigned char w[][4][4]){
 unsigned char* encodeData(unsigned char *input){
 
 	unsigned char state[4][4];
-  	int i,r,c;
- 
-    for(r=0; r<4; r++)
-    {
-        for(c=0; c<4 ;c++)
-        {
-            state[r][c] = input[c*4+r];
-        }
-    }
- 
-   addRoundKey(state,w[0]);
- 
-    for(i=1; i<=10; i++)
-    {
-        replace(state);
-        shiftRow(state);
-        if(i!=10)
-		MixColumns(state);
-        addRoundKey(state,w[i]);
-    }
- 
-    for(r=0; r<4; r++)
-    {
-        for(c=0; c<4 ;c++)
-        {
-            input[c*4+r] = state[r][c];
-        }
-    }
+	int i,r,c;
+	//move the input to data[][4]	
+	for(r=0; r<4; r++)
+	{
+		for(c=0; c<4 ;c++)
+		{
+			state[r][c] = input[c*4+r];
+		}
+	}
+
+	addRoundKey(state,keySpan[0]);
+
+	for(i=1; i<=10; i++)
+	{
+		replace(state);
+		shiftRow(state);
+		if(i!=10)
+			mixColum(state);
+		addRoundKey(state,keySpan[i]);
+	}
+
+	for(r=0; r<4; r++)
+	{
+		for(c=0; c<4 ;c++)
+		{
+			input[c*4+r] = state[r][c];
+		}
+	}
+	return input;
  
 }
 
-int main(){
-	unsigned char a = 0xf1;
-	unsigned char b = a ^ 0x02;
+//============================================aes encoding======================================================
 
-	printf("0x %X", b);	
+
+//============================================aes decoding======================================================
+/**
+* replace with invsBox
+**/
+void rever_replace(unsigned char data[][4]){
+	int i = 0;
+	int j = 0;
+	for(i = 0; i < 4; i++){
+		for(j = 0; j < 4; j++){
+			data[i][j] = invsBox[data[i][j]];
+		}
+	}
+}
+
+/**
+* decoding -----  shift rows
+**/
+void rever_shiftRow(unsigned char data[][4]){
+	int i,j;
+	unsigned char temp[4];
+
+	for(i = 1; i < 4; i++){
+		for(j = 0; j < 4; j++){
+			temp[j] = data[i][(j - i + 4)%4];
+		}
+
+		for(j = 0; j < 4; j++){
+			data[i][j] = temp[j];
+		}
+	}
+}
+
+/**
+* decoding -----  shift rows
+**/
+void rever_mixColum(unsigned char data[][4]){
+	int i,j;
+	int temp[4];
+	
+	for(i = 0 ; i < 4; i++){
+		for(j = 0; j < 4; j++){
+			temp[j] = data[j][i];
+		}
+
+		for(j = 0; j < 4; j++){
+			data[j][i] = FFmul(0x0e, temp[j]) ^ FFmul(0x0b, temp[(j+1)%4]) ^ FFmul(0x0d, temp[(j+2)%4]) ^ FFmul(0x09, temp[(j+3) %4]);
+		}
+	}
+}
+
+
+/**
+* decoding -----  shift rows
+**/
+unsigned char* decoding(unsigned char *input){
+	unsigned char data[4][4];
+	int i,j;
+	
+	for(i = 0 ; i < 4; i++){
+		for(j = 0; j < 4; j++){
+			data[i][j] = input[i + 4 * j];
+		}
+	}
+
+	addRoundKey(data, keySpan[10]);
+
+	for(i = 9; i >= 0; i--){
+		rever_shiftRow(data);
+		rever_replace(data);
+		addRoundKey(data,keySpan[i]);
+		if(i){
+			rever_mixColum(data);
+		}
+	}
+
+	for(i = 0; i < 4; i++){
+		for(j = 0; j < 4; j++){
+			input[j*4 + i] = data[i][j];
+		}
+	}
+
+	return input;	
+}
+
+//============================================aes decoding======================================================
+
+void print_key(unsigned char w[][4][4]){
+	int i,j,k;
+	for(i = 0; i < 11; i++){
+		for(j = 0; j < 4; j++){
+			printf("keySpan[%d][%d] ---------------------------------------- \n", i, j);
+			for(k = 0; k < 4; k++){
+				printf(" 0x%2x ", w[i][j][k]);
+			}
+			printf("\n ----------------------------------------------------- \n");
+		}
+	}
+
+}
+
+int main(){
+	unsigned char key[17] = "this_is_key";
+	unsigned char data[17] = "i am Jackzhous";
+	printf("primary data: --- %s ---\n", data);
+	keyExpansion(key, keySpan);
+	
+//	print_key(keySpan);
+	
+	printf("encode data: --- %s ---\n", encodeData(data));
+
+	printf("\n \n \n \n ---- %s ---\n",decoding(data));
 	return 0;
 }
