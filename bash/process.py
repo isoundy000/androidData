@@ -44,5 +44,17 @@ class MyProcess:
 		result = self.exec_cmd(cmd)
 		return result 
 		
+	#apk解包
+	def apktool_d(self, apk_file, output_file):
+		cmd = 'java -jar apktool.jar -d %s -fo %s' % (apk_file, output_file)
+		result = self.exec_cmd(cmd)
+		return result
+	
+	#apk合包
+	def apktool_b(self, output_file):
+		cmd = 'java -jar apktool.jar b %s' % output_file
+		result = self.exec_cmd(cmd)
+		return result
+		
 if __name__ == '__main__':
 	process_main()
