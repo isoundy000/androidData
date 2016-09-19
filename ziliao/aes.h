@@ -3,6 +3,8 @@
 	
 	#include <stdio.h>
 	#include <string.h>
+	#include <stdlib.h>
+	#include <malloc.h>
 	//=========================encoding====================	
 	void replace(unsigned char data[][4]);
 	
@@ -19,7 +21,9 @@
 
 
 	//=========================decoding====================	
-
+	
+	unsigned char * expanData(unsigned char *input);
+	unsigned char* deodeData(unsigned char* input);
 	void rever_replace(unsigned char data[][4]);
 	void rever_shiftRow(unsigned char data[][4]);
 	void rever_mixColum(unsigned char data[][4]);

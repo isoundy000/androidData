@@ -325,16 +325,60 @@ void print_key(unsigned char w[][4][4]){
 
 }
 
-int main(){
+
+//扩展输入的数据为16的倍数
+unsigned char * expanData(unsigned char *input){
+        if(NULL == input){
+                printf("the input data is NULL\n");
+                return NULL;
+        }   
+
+        int len = strlen(input) / 16; 
+        if((strlen(input)) % 16 != 0 ){         //如果不是16的倍数，说明输入数据后面还有数据
+                len++;
+        }   
+        printf("we need len is %d\n", len);
+        unsigned char *data_addr = (unsigned char*)malloc((16 * len * sizeof(unsigned char)) + 1);  //添加一个字符串结束符的空间
+        if(data_addr != NULL){
+                strcpy(data_addr, input);
+        }
+		int i = 0;
+		len = strlen(data_addr);
+		printf("encode ");
+		for(i = 0; i < len; i+=16){
+			
+			encodeData((data_addr + i));
+			printf(" %d ", i);
+		}
+		printf("\n");
+
+        return data_addr;
+}
+
+
+unsigned char * deodeData(unsigned char* input){
+	unsigned char* data = input;
+	int length = strlen(input);
+	int i = 0;
+		printf("encode ");
+	for(i = 0; i < length; i+=16){
+		decoding(data+i);
+			printf(" %d ", i);
+	}
+		printf("\n");
+	return input;
+}
+
+int main(int args, char *argv[]){
 	unsigned char key[17] = "this_is_key";
 	unsigned char data[17] = "i am Jackzhous";
-	printf("primary data: --- %s ---\n", data);
+	printf("primary data: --- %s ---\n", argv[1]);
 	keyExpansion(key, keySpan);
 	
 //	print_key(keySpan);
-	
-	printf("encode data: --- %s ---\n", encodeData(data));
+	unsigned char * input = expanData(argv[1]);
+	printf("encode data: --- %s ---\n", input);
 
-	printf("\n \n \n \n ---- %s ---\n",decoding(data));
+	printf("\n \nafter \n \n ---- %s ---\n",deodeData(input));
 	return 0;
 }

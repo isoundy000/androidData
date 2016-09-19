@@ -1,4 +1,4 @@
-应用安装的流程及路径 
+用安装的流程及路径 
 应用安装涉及到如下几个目录：        
 
 system/app ---------------系统自带的应用程序，获得adb root权限才能删除
@@ -21,6 +21,9 @@ PathClassLoader是Android应用中的默认加载器。他们的区别是：
 DexClassLoader可以加载任何路径的apk/dex/jar
 PathClassLoader只能加载/data/app中的apk，也就是已经安装到手机中的apk。这个也是PathClassLoader作为默认的类加载器的原因，因为一般程序都是安装了，在打开，这时候PathClassLoader就去加载指定的apk(解压成dex，然后在优化成odex)就可以了。
 
+这里需要注意的是PathClassLoader和DexClassLoader类的父加载器是BootClassLoader,他们的父类是BaseDexClassLoader)
+这里有一个DexPathList对象，在来看一下DexPathList.java源码
+
 classLoader双亲委托机制：
 	每个classLoader都有一个父类的classLoader，当classLoader试图去加载某个类时，都会父类先去加载这个类，如果加载到了就完成了；反之，则把加载类的任务交给子classLoader去加载，如果子classLoader也加载不到类，则返回给委托的发起者，由它到指定的文件系统或网络等URL中加载该类。如果它们都没有加载到这个类时，则抛出ClassNotFoundException异常；找到后就把类加载到内存当中，最后返回这个类在内存当中的实例对象
 	
@@ -29,4 +32,10 @@ classLoader双亲委托机制：
 	判断两个class对象是否相同？
 		类名相同和加载器相同才是相同的两个类
 	
+加载Activity的时候，有一个很重要的类：LoadedApk.java，这个类是负责加载一个Apk程序的,我们可以看到他内部有一个mClassLoader变量，他就是负责加载一个Apk程序的，那么我们只要获取到这个类加载器就可以了。他不是static的，所以我们还得获取一个LoadedApk对象。我们在去看一下另外一个类：ActivityThread.java的源码
+
+
+Android应用入口在哪儿？
+	不要再说是Application的onCreate方法了，其实是ActivityThread中的main方法
+
 http://blog.csdn.net/jiangwei0910410003/article/details/48104455
