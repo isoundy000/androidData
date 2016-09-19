@@ -1,0 +1,32 @@
+应用安装的流程及路径 
+应用安装涉及到如下几个目录：        
+
+system/app ---------------系统自带的应用程序，获得adb root权限才能删除
+
+data/app  ---------------用户程序安装的目录。安装时把                                                                                                      apk文件复制到此目录
+data/data ---------------存放应用程序的数据
+data/dalvik-cache--------将apk中的dex文件安装到dalvik-cache目录下(dex文件是dalvik虚拟机的可执行文件,其大小约为原始apk文件大小的四分之一)
+
+安装过程：
+
+复制APK安装包到data/app目录下，解压并扫描安装包，把dex文件(Dalvik字节码)保存到dalvik-cache目录，并data/data目录下创建对应的应用数据目录。
+
+卸载过程：
+
+删除安装过程中在上述三个目录下创建的文件及目录。
+
+
+
+PathClassLoader是Android应用中的默认加载器。他们的区别是：
+DexClassLoader可以加载任何路径的apk/dex/jar
+PathClassLoader只能加载/data/app中的apk，也就是已经安装到手机中的apk。这个也是PathClassLoader作为默认的类加载器的原因，因为一般程序都是安装了，在打开，这时候PathClassLoader就去加载指定的apk(解压成dex，然后在优化成odex)就可以了。
+
+classLoader双亲委托机制：
+	每个classLoader都有一个父类的classLoader，当classLoader试图去加载某个类时，都会父类先去加载这个类，如果加载到了就完成了；反之，则把加载类的任务交给子classLoader去加载，如果子classLoader也加载不到类，则返回给委托的发起者，由它到指定的文件系统或网络等URL中加载该类。如果它们都没有加载到这个类时，则抛出ClassNotFoundException异常；找到后就把类加载到内存当中，最后返回这个类在内存当中的实例对象
+	
+	好处：
+		避免了重复加载类，当加载某一个类时，如果他的父类已经加载，子classLoader就没必要再去加载一次了
+	判断两个class对象是否相同？
+		类名相同和加载器相同才是相同的两个类
+	
+http://blog.csdn.net/jiangwei0910410003/article/details/48104455
