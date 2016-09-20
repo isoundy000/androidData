@@ -3,7 +3,10 @@
 
 system/app ---------------系统自带的应用程序，获得adb root权限才能删除
 
-data/app  ---------------用户程序安装的目录。安装时把                                                                                                      apk文件复制到此目录
+data/app  ---------------用户程序安装的目录。安装时把apk文件复制到此目录 
+	-- 获取此路径
+		String sourceFile = this.getApplicationInfo().sourceDir;
+		/data/app/com.example.testsecurityapk-2/base.apk
 data/data ---------------存放应用程序的数据
 data/dalvik-cache--------将apk中的dex文件安装到dalvik-cache目录下(dex文件是dalvik虚拟机的可执行文件,其大小约为原始apk文件大小的四分之一)
 
@@ -38,4 +41,16 @@ classLoader双亲委托机制：
 Android应用入口在哪儿？
 	不要再说是Application的onCreate方法了，其实是ActivityThread中的main方法
 
+	
+java反射：
+ getMethod  能获取这个类的所有方法
+ getDeclaredMethod   只能获取该类的public 默认  protected 私有  但不能获取父类继承的
+ 
+ 【主线程】的主要责任：
+
+       ? 快速处理UI事件。而且只有它才处理UI事件， 其它线程还不能存取UI画面上的对象(如TextView等)，此时， 主线程就叫做UI线程。基本上，Android希望UI线程能根据用户的要求做出快速响应，如果UI线程花太多时间处理后台的工作，当UI事件发生时，让用户等待时间超过5秒而未处理，Android系统就会给用户显示ANR提示信息。
+
+         只有UI线程才能执行View派生类的onDraw()函数。
+
+      ? 快速处理Broadcast消息。【主线程】除了处理UI事件之外，还要处理Broadcast消息。所以在BroadcastReceiver的onReceive()函数中，不宜占用太长的时间，否则导致【主线程】无法处理其它的Broadcast消息或UI事件。如果占用时间超过10秒， Android系统就会给用户显示ANR提示信息。
 http://blog.csdn.net/jiangwei0910410003/article/details/48104455
