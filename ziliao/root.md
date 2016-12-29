@@ -1,8 +1,3 @@
-# root三大物件
-## su 切换用户，给当前进程添加的uid设置为root用户
-## SuperUser.apk  一个普通的apk，常用于root权限管理的apk
-## android系统的设备
-
 # Linux用户系统
 Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统
 
@@ -39,6 +34,7 @@ Process process = Runtime.getRuntime().exec("su");
 方法：
 	1. 改变bin和xbin目录为可读可写权限
 	2. 将su拷贝进去即可
+	3. 改变su的权限为755
 理论容易，实现困难....
 第一步，想要拷贝进去，你就必须得拥有root权限，试想我既然有root权限还要root干嘛呢，这就是一个死的逻辑
 
