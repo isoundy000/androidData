@@ -45,10 +45,55 @@ Process process = Runtime.getRuntime().exec("su");
 那就想办法，利用系统的漏洞，暂时的获取一个root权限，然后把su拷贝进去就可以了
 
 # Android系统漏洞
-## 漏洞信息 --- adbc漏洞
-什么是adbc？
-
+## 漏洞信息 --- adbd漏洞
+什么是adbd？
+	adbd是运行在目标Android设备上的一个守护进程，保证PC端使用adb服务在Android设备上操作的shell用户正常运行；
+adb运作概图：
+![adb](adb.png)
+	
 CVE: CVE-2010-EASY
 Affect: 2.2.3及之前，Fixed：2.3.6
 漏洞代码： /system/core/adb/adb.c
 /2.2.3/system/core/adb/adb.c adb_main
+```core/adb/adb
+int adb_main(int is_daemon)
+    {
+        ......
+        property_get("ro.secure", value, "");
+        if (strcmp(value, "1") == 0) {
+            // don't run as root if ro.secure is set...
+            secure = 1;
+            ......
+       }
+    
+       if (secure) {
+           ......
+           setgid(AID_SHELL);
+           setuid(AID_SHELL);   //shell创建的进程数到达上限时会失败
+           ......
+       }
+  }
+```
+
+### root原理：
+1、在Android的shell用户下，制造大量的僵尸进程，直至达到shell用户的进程数上限RLIMIT_NPROC；
+
+2、kill当前系统中的adb进程，并再次占据其进程位置以保持达到上限；
+
+3、系统会在一段时间后重启一个adb进程，该进程最初是root用户，在完成少许初始化工作后，调用setuid()切换至shell用户；
+
+4、此时shell用户的进程数已经达到上限，所以setuid()失败，返回-1，并且用户更换没有完成，adb还是root权限；
+
+5、adb没有检查setuid()的返回值，继续后续的工作，因此产生了一个具有root权限的adb进程，可以被用于与用户的下一步交互
+
+
+参考链接：
+[adb setuid提权漏洞的分析][1]
+[udev漏洞][2]
+[FrameworkListener漏洞][3]
+[GingerBreak][4]
+
+[1]:http://www.claudxiao.net/2011/04/android-adb-setuid/
+[2]:http://blog.csdn.net/jackaduma/article/details/7286348
+[3]:http://blog.csdn.net/jackaduma/article/details/7287926
+[4]:http://blog.csdn.net/jackaduma/article/details/7287946
