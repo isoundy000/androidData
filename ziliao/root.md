@@ -8,7 +8,8 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 
 # su这个文件是什么？存放在什么地方？为什么要存放在那个地方？
 
-![su]su.png
+![su](su.png)
+
 su能进行切换用户，赋予当前进程不同的权限，更好的使用系统的资源;__su文件如何完成用户的切换？？？__
 
 ## 存放位置为什么在这个地方？
@@ -44,4 +45,10 @@ Process process = Runtime.getRuntime().exec("su");
 那就想办法，利用系统的漏洞，暂时的获取一个root权限，然后把su拷贝进去就可以了
 
 # Android系统漏洞
+## 漏洞信息 --- adbc漏洞
+什么是adbc？
 
+CVE: CVE-2010-EASY
+Affect: 2.2.3及之前，Fixed：2.3.6
+漏洞代码： /system/core/adb/adb.c
+/2.2.3/system/core/adb/adb.c adb_main
