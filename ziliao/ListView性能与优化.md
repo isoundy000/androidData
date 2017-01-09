@@ -1,5 +1,6 @@
 # 优化ListView
 如果你想让你的listview在每个设备上都表现的很顺滑，尤其是在2.3之后的系统中， 那么下边几项可以看一下：
+
 1. 在adpter中的getview中条件最小化
 2. 避免垃圾回收警告
 3. 滑动过程避免加载图片
@@ -9,6 +10,7 @@
 
 ## 在adpter中的getview中条件最小化
 不知道你是否放在主活动中放了很多的条件语句，如果没有最好，这里有个改善条件判断的例子：
+
 改之前
 ```java
 @Override
@@ -65,6 +67,7 @@ public View getView(int position, View convertView, ViewGroup paramViewGroup) {
 + 列表项层次布局
 + 检查getView
 + List View 属性
+
 ## 加载图片
 如果你正在加载图片，你可以使用ImageLoader库，来自Google IO2013开源客户端，这个库加载图片很快，使用的是Volley加载图片，我们在滑动事件触发的时候不应该加载图片，因为在极短时间内，listview不能平滑的加载所有行，并且没有延迟。可能会加载完，但是在某些低端设备上就不行了。这里当滑动时间触发时，ImageLoader停止了图片加载队列，当滚动停止时，队列继续。
 ```java
