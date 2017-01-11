@@ -1,4 +1,4 @@
-# 概念
+# JavaScript概念
 
 主要用于在web网页上处理业务逻辑，嵌入在HTML语言中，配合css语言使用。
 # 语法
@@ -326,6 +326,10 @@ input 元素的 validity 属性包含一系列关于 validity 数据属性:
 |valueMissing|	设置为 true，如果元素 (required 属性) 没有值|
 |valid|	设置为 true，如果元素的值是合法的|
 
+### 部分标签组件学习
+
+
+
 ***
 # CSS 简单学习
 如果说javascript是处理html页面业务逻辑，那css则是负责html的UI布局，一个好的前端UI工程师，CSS必须要熟练使用掌握
@@ -404,3 +408,51 @@ body {background:#ffffff url('img_tree.png') no-repeat right top;}
 |vertical-align|设置元素的垂直对齐|
 |white-space|设置元素中空白的处理方式|
 |word-spacing	|设置字间距|
+
+## 多个css选择器覆盖问题
+当前HTML定义了一个li的选择器，当前页面引用的一个css外部文件也有一个li的选择器，那到底会使用哪个li选择器作为布局呢？
+出现这种情况遵循__最近原则__，即当前组件最近的一个选择器，里面的属性相同则进行覆盖，覆盖就是离得最近的选择器覆盖远的，最近的选择器没有的则会继承下来，如下例子:
+```css
+//app.css
+.background {
+	max-width: 25%;
+}
+
+//app2.css
+.background {
+	max-width: 30%;
+	padding-bottom: 2px;
+}
+
+//login.html
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="app.css" rel="stylesheet" />
+		<link href="app2.css" rel="stylesheet" />
+		<style>
+			.background {
+				max-width: 50%;
+				height: 34px;
+			}
+		</style>
+	</head>
+<body>
+	....
+	<div id="slider" class="mui-slider">
+		<div id="test" class="background">
+
+		</div>
+	</div>
+	....
+</body>
+```
+那最终id为test的使用的background的样式是哪个呢？遵照上面的最近原则答案如下：
+```css
+.background {
+	max-width: 50%;
+	padding-bottom: 2px;
+	height: 34px;
+}
+```
