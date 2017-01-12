@@ -80,7 +80,7 @@ var page = mui.preload({
 
 使用.on()方法实现批量元素的事件绑定，方法介绍：
 
-![on][mui_on.png]
+![on](mui_on.png)
 
 示例
 ```javascript
@@ -100,17 +100,17 @@ mui(".mui-table-view").on('tap','.mui-table-view-cell',function(){
 ### 事件取消
 取消绑定，则可以使用off()方法。 off()方法根据传入参数的不同，有不同的实现逻辑。
 
-![off][mui_off.png]
+![off](mui_off.png)
 
 ### 事件触发
 使用mui.trigger()方法可以动态触发特定DOM元素上的事件。
 
-![triggrt][mui_trigger.png]
+![triggrt](mui_trigger.png)
 
 ### 触发自定义事件
 可以进行一些网页的跳转，mui.fire()
 
-![mui_fire][mui_fire.png]
+![mui_fire](mui_fire.png)
 
 ### 手势事件
 移动端开发时，会有一些手势事件，点击tap，双击doubletap等，为了方便开放者快速集成这些手势，mui内置了常用的手势事件，目前支持的手势事件见如下列表：
