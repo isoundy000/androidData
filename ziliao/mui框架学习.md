@@ -114,7 +114,199 @@ mui(".mui-table-view").on('tap','.mui-table-view-cell',function(){
 
 ### 手势事件
 移动端开发时，会有一些手势事件，点击tap，双击doubletap等，为了方便开放者快速集成这些手势，mui内置了常用的手势事件，目前支持的手势事件见如下列表：
+| 分类        | 参数    |  描述  |
+| --------   | -----:   | :----: |
+| 点击        | tap      |   单机屏幕    |
+| 点击        | doubletap     |  双击屏幕    |
+| 长按        | 	longtap     |   长按屏幕   |
+| 长按        | 	hold     |   按住屏幕   |
+| 长按        | 	release     |   离开屏幕   |
+| 滑动        | 	swipeleft     |   向左滑动   |
+| 滑动        | 	swiperight     |   向右滑动   |
+| 滑动        | 	swipeup     |   向上滑动   |
+| 滑动        | 	swipedown     |   向下滑动   |
+| 拖动        | 	dragstart     |   开始拖动   |
+| 拖动        | 	drag      |   拖动  |
+| 拖动        | 	dragend      |   结束拖动   |
 
+### 监听上述动作
+	mui框架默认会监听部分手势动作，如果需要监听你想要的动作，需要在初始化配置动作，mui.init的gestureConfig参数，如下代码：
+
+```javascript
+mui.init({
+  gestureConfig:{
+   tap: true, //默认为true
+   doubletap: true, //默认为false
+   longtap: true, //默认为false
+   swipe: true, //默认为true
+   drag: true, //默认为true
+   hold:false,//默认为false，不监听
+   release:false//默认为false，不监听
+  }
+});
+```
+__注意:__dragstart、drag、dragend共用drag开关，swipeleft、swiperight、swipeup、swipedown共用swipe开关
+
+### 事件管理总结
+
++ 单个元素上的事件监听，建议使用addEventListener()，如elem.addEventListener("swipeleft",function()}
++ 多个元素上的事件监听，建议使用mui.on事件进行绑定
+
+__从上面的api都会或多或少的了解部分mui提供的js函数，如mui.init(),但是只是了解函数的部分参数，下面将具体介绍下面一些函数的配置参数及功能__
+
+## mui.init()
+直接上代码，浅显易懂
+```javascript
+mui.init({
+//子页面
+	subpages: [{
+		//...
+	}],
+//预加载
+	 preloadPages:[
+	    //...
+ 	 ],
+//下拉刷新、上拉加载
+ 	pullRefresh : {
+	   //...
+     	},
+//手势配置
+ 	 gestureConfig:{
+	   //...
+	},
+//侧滑关闭
+	swipeBack:true, //Boolean(默认false)启用右滑关闭功能
+	
+//监听Android手机的back、menu按键
+	keyEventBind: {
+		backbutton: false,  //Boolean(默认true)关闭back按键监听
+		menubutton: false   //Boolean(默认true)关闭menu按键监听
+	},
+//处理窗口关闭前的业务
+	beforeback: function() {
+		//... //窗口关闭前处理其他业务详情点击 ↑ "关闭页面"链接查看
+	},
+//设置状态栏颜色
+	statusBarBackground: '#9defbcg', //设置状态栏颜色,仅iOS可用
+	preloadLimit:5//预加载窗口数量限制(一旦超出,先进先出)默认不限制
+})
+```
+
+## mui()
+mui使用css选择器获取HTML元素，返回mui对象数组。
+mui("p")：选取所有<p>元素
+mui("p.title")：选取所有包含.title类的<p>元素
+若要将mui对象转化成dom对象，可使用如下方法（类似jquery对象转成dom对象）：
+```javascript
+//obj1是mui对象
+var obj1 = mui("#title");
+//obj2是dom对象
+var obj2 = obj1[0]; 
+```
+
+## each()
+each既是一个类方法，同时也是一个对象方法，两个方法适用场景不同；换言之，你可以使用mui.each()去遍历数组或json对象，也可以使用mui(selector).each()去遍历DOM结构。
+
+![each](mui_each.png)
+
+### each遍历数组
+```javascript
+var array = [1,2,3]
+mui.each(array,function(index,item){
+  console.log(item*item);
+}) 
+```
+
+### each遍历HTML输入标签
+
+```html
+<div class="mui-input-group">
+  <div class="mui-input-row">
+    <label>字段1：</label>
+    <input type="text" class="mui-input-clear" id="col1" placeholder="请输入">
+  </div>
+  <div class="mui-input-row">
+    <label>字段2：</label>
+    <input type="text" class="mui-input-clear" id="col2" placeholder="请输入">
+  </div>
+  <div class="mui-input-row">
+    <label>字段3：</label>
+    <input type="text" class="mui-input-clear" id="col3" placeholder="请输入">
+  </div>
+</div>
+```
+提交时校验三个字段均不能为空，若为空则提醒并终止业务逻辑运行，使用each()方法循环校验，如下：
+```javascript
+var check = true;
+mui(".mui-input-group input").each(function () {
+  //若当前input为空，则alert提醒
+  if(!this.value||trim(this.value)==""){
+    var label = this.previousElementSibling;
+    mui.alert(label.innerText+"不允许为空");
+    check = false;
+    return false;
+  }
+});
+//校验通过，继续执行业务逻辑
+if(check){
+  //.....
+}
+```
+
+## extend()
+将两个对象合并成一个对象
+
+### extend示例
+
+![extend](mui_extend.png)
+
+```javascript
+var target = {
+  company:"dcloud",
+  product:{
+    mui:"小巧、高效"
+  }
+} 
+var obj1 = {
+  city:"beijing",
+  product:{
+    HBuilder:"飞一样的编码"
+  }
+}
+mui.extend(target,obj1);
+//输出：{"company":"dcloud","product":{"HBuilder":"飞一样的编码"},"city":"beijing"}
+console.log(JSON.stringify(target));
+```
+### extend()深度合并
+```javascript
+var target = {
+  company:"dcloud",
+  product:{
+    mui:"小巧、高效"
+  }
+} 
+var obj1 = {
+  city:"beijing",
+  product:{
+    HBuilder:"飞一样的编码"
+  }
+}
+//支持深度合并
+mui.extend(true,target,obj1);
+//输出：{"company":"dcloud","product":{"mui":"小巧、高效","HBuilder":"飞一样的编码"},"city":"beijing"}
+console.log(JSON.stringify(target));
+```
+
+## OS
+我们经常会有通过navigator.userAgent判断当前运行环境的需求,mui对此进行了封装,通过调用mui.os.XXX即可
+
+![os](mui_os.png)
+
+## mui组件
+除上面的api之外，mui还提供了很多封装好的html组件，使用非常简单，在Hbuilder ide里面只需要敲m就会显示出支持的组件，使用非常方便，这里就不具体介绍使用方法了，如需了解详情，请点击一下链接访问
+
+[mui组件链接][3]
 
 [1]:http://www.dcloud.io/mui.html
 [2]:http://dev.dcloud.net.cn/mui/window/#openwindow
+[3]:http://dev.dcloud.net.cn/mui/snippet/
