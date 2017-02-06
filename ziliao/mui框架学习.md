@@ -114,6 +114,7 @@ mui(".mui-table-view").on('tap','.mui-table-view-cell',function(){
 
 ### 手势事件
 移动端开发时，会有一些手势事件，点击tap，双击doubletap等，为了方便开放者快速集成这些手势，mui内置了常用的手势事件，目前支持的手势事件见如下列表：
+
 | 分类        | 参数    |  描述  |
 | --------   | -----:   | :----: |
 | 点击        | tap      |   单机屏幕    |
@@ -130,6 +131,7 @@ mui(".mui-table-view").on('tap','.mui-table-view-cell',function(){
 | 拖动        | 	dragend      |   结束拖动   |
 
 ### 监听上述动作
+
 	mui框架默认会监听部分手势动作，如果需要监听你想要的动作，需要在初始化配置动作，mui.init的gestureConfig参数，如下代码：
 
 ```javascript
@@ -301,6 +303,129 @@ console.log(JSON.stringify(target));
 我们经常会有通过navigator.userAgent判断当前运行环境的需求,mui对此进行了封装,通过调用mui.os.XXX即可
 
 ![os](mui_os.png)
+
+## plus
+mui提供的plus可以很方便的访问系统的原声东西，如手机devices,还有webview等
+
+## mui网络访问
+mui框架基于htm5plus的XMLHttpRequest，封装了常用的Ajax函数，支持GET、POST请求方式，支持返回json、xml、html、text、script数据类型； 本着极简的设计原则，mui提供了mui.ajax方法，并在mui.ajax方法基础上，进一步简化出最常用的mui.get()、mui.getJSON()、mui.post()三个方法。
+
+### 简单用法
+
+__> mui.ajax( url [,settings] )__
+
+
+url：请求发送的目标地址
+
+settings：key/value格式的json对象，用来配置ajax请求参数，支持的参数如下：
+
+
+data：发送到服务器的业务数据；
+
+type：请求方式，目前仅支持'GET'和'POST'，默认为'GET'方式；
+
+dataType：预期服务器返回的数据类型；如果不指定，mui将自动根据HTTP包的MIME头信息自动判断；
+支持设置的dataType可选值：
+
+
+"xml": 返回XML文档
+
+"html": 返回纯文本HTML信息；
+
+"script": 返回纯文本JavaScript代码
+
+"json": 返回JSON数据
+
+"text": 返回纯文本字符串
+
+
+success：Type: Functon（Anything data,String textStatus,XMLHttpRequest xhr）
+请求成功时触发的回调函数，该函数接收三个参数：
+
+
+data：服务器返回的响应数据，类型可以是json对象、xml对象、字符串等；
+
+textStatus：状态描述，默认值为'success'
+
+xhr：xhr实例对象
+
+
+error：Type: Functon（XMLHttpRequest xhr,String type,String errorThrown）请求失败时触发的回调函数；
+该函数接收三个参数：
+
+
+xhr：xhr实例对象
+
+type：错误描述，可取值："timeout", "error", "abort", "parsererror"、"null"
+
+errorThrown：可捕获的异常对象
+
+
+timeout：Type: Number，请求超时时间（毫秒），默认值为0，表示永不超时；若超过设置的超时时间(非0的情况)，依然未收到服务器响应，则触发error回调；
+
+headers：Type: Object,格式为：{'Content-Type'：'application/json'}，
+
+```javascript
+mui.ajax(url,{
+    data:{
+        username:'username',
+        password:'password'
+    },
+    dataType:'json',//服务器返回json格式数据
+    type:'post',//HTTP请求类型
+    timeout:10000,//超时时间设置为10秒；
+    success:function(data){
+        //服务器返回响应，根据响应结果，分析是否登录成功；
+        ...
+    },
+    error:function(xhr,type,errorThrown){
+        //异常处理；
+        console.log(type);
+    }
+});
+```
+
+__mui.post( url [,data] [,success] [,dataType] ) __
+mui.post()方法是对mui.ajax()的一个简化方法，直接使用POST请求方式向服务器发送数据、且不处理timeout和异常（若需处理异常及超时，请使用mui.ajax()方法）
+
+```javascript
+mui.post('http://server-name/login.php',{
+        username:'username',
+        password:'password'
+    },function(data){
+        //服务器返回响应，根据响应结果，分析是否登录成功；
+        ...
+    },'json'
+);
+```
+
+__> mui.get( url [,data] [,success] [,dataType] )__
+mui.get()方法和mui.post()方法类似，只不过是直接使用GET请求方式向服务器发送数据、且不处理timeout和异常（若需处理异常及超时，请使用mui.ajax()方法）。如下为获得某服务器新闻列表的代码片段，服务器以json格式返回数据列表：
+
+```javascript
+mui.get('http://server-name/list.php',
+    {category:'news'},
+    function(data){
+        //获得服务器响应
+        ...
+    },'json'
+);
+```
+
+__> mui.getJSON( url [,data] [,success] )__
+mui.getJSON()方法是在mui.get()方法基础上的更进一步简化，限定返回json格式的数据，其它参数和mui.get()方法一致，如上获得新闻列表的代码换成mui.getJSON()方法后，更为简洁，如下：
+
+```javascript
+mui.getJSON('http://server-name/list.php',
+    {category:'news'},
+    function(data){
+        //获得服务器响应
+        ...
+    }
+);
+```
+
+
 
 ## mui组件
 除上面的api之外，mui还提供了很多封装好的html组件，使用非常简单，在Hbuilder ide里面只需要敲m就会显示出支持的组件，使用非常方便，这里就不具体介绍使用方法了，如需了解详情，请点击一下链接访问
