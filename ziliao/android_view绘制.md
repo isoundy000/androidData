@@ -141,7 +141,8 @@ layout的流程主要也是遍历整个view树结构，调用view.layout(int l, 
 ### View的requestLayout方法
 requestLayout()方法会调用measure过程和layout过程，不会调用draw过程，也不会重新绘制任何View包括该调用者本身。
 
+本文参考于：[这里][1]
 
-
+[1]:http://blog.csdn.net/yanbober/article/details/46128379
 
 
