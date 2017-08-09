@@ -10,14 +10,12 @@ class EasyCharger:
 	type = {'Content-Type': 'application/json'}
 	def __init__(self, output_file_name):
 		self.filename = output_file_name
-		self.token = 'null'
 	# 登录
 	def login(self):
 		url = host + 'login'
 		data = {"mobile":"admin","password":"16E740FC857D742F1705CE4C997CD5C8"}
 		result = self.network(url, data)
 		str_token = result["token"]
-		self.token = str_token
 		self.type.setdefault("Token", str_token)
 		return str_token
 
@@ -26,7 +24,7 @@ class EasyCharger:
 	def listAllProvinceData(self):
 		url = host + 'device/selectStaion'
 		data = {"currentPage":1,"itemsPerPage":10}
-		result = self.network(url, data)
+		reslut = self.network(url, data)
 		ret = self.checkResponse(result)
 		if ret == "true":
 			data["itemsPerPage"] = result["total"]
@@ -61,9 +59,11 @@ class EasyCharger:
 
 	#过滤每个充电站中有异常端口的数据，只返回不正常的数据
 	def filiterLostStatusData(self, ports):
-		lostStatusPorts = []
+		lostStatusPorts = {}
+		i = 0
 		for port in ports:
 			if port["pgstatus"] == 10:	#异常状态
 				per = {"pgstatus":10, "pgnum":port["pgnum"]}
-				lostStatusPorts.append(per)
+				lostStatusPorts[i] = per
+				i = i + 1
 		return lostStatusPorts
