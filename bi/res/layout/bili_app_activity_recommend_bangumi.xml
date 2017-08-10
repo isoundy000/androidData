@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/bili_app_layout_navigation_top_bar" />
-    <fragment android:id="@id/content" android:tag="RecommendBangumiFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" class="tv.danmaku.bili.ui.bangumi.RecommendBangumiFragment" />
-</LinearLayout>

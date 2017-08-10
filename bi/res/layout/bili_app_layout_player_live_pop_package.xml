@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/panel" android:background="@color/videoplay_live_pop_bg" android:padding="@dimen/item_spacing" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="输入赠送道具的数量:" style="@style/TextAppearance.App.Title" />
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_spacing">
-        <EditText android:textColorHint="@android:color/white" android:id="@id/edit" android:layout_width="144.0dip" android:text="1" android:maxLength="5" android:inputType="number" style="@style/Widget.App.Button.Border" />
-        <Button android:textSize="@dimen/text_size_large" android:id="@id/send" android:background="@drawable/selector_button_solid_pink_always" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:minWidth="72.0dip" android:minHeight="36.0dip" android:text="@string/live_props_pop_handsel" style="@style/Widget.App.Button.Border" />
-    </LinearLayout>
-</LinearLayout>

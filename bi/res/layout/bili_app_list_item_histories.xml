@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.ForegroundRelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/icon" android:layout_width="118.0dip" android:layout_height="wrap_content" android:scaleType="centerCrop" fresco:placeholderImage="@drawable/bili_default_image_tv" fresco:scaleViewType="fitWidth" fresco:aspectRadioWidth="16" fresco:aspectRadioHeight="10" xmlns:fresco="http://schemas.android.com/apk/res-auto" />
-    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Title" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:lines="2" android:layout_toRightOf="@id/icon" />
-    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/gray_dark" android:ellipsize="end" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="sdsd" android:layout_below="@id/title" android:layout_alignLeft="@id/title" />
-</tv.danmaku.bili.widget.ForegroundRelativeLayout>

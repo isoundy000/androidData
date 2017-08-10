@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <integer name="bangumi_section_span_count">4</integer>
-    <integer name="newyear_danmaku_screen_size">80</integer>
-    <integer name="category_section_total_span_count">4</integer>
-</resources>

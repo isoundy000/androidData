@@ -3,7 +3,6 @@
 
 import urllib2
 import json
-
 host = 'http://www.taxiaides.com/xyyc/'
 
 class EasyCharger:
@@ -67,3 +66,15 @@ class EasyCharger:
 				per = {"pgstatus":10, "pgnum":port["pgnum"]}
 				lostStatusPorts.append(per)
 		return lostStatusPorts
+
+	def getProvinceInfo(self):
+		url = host + "common/provinces"
+		data = {}
+		result = self.network(url, data)
+		if result is not None:
+			province = result['provinces']
+			p_dic = {}
+			for item in province:
+				p_dic.setdefault(item['id'], item['name'])
+			return p_dic
+		return 'false'

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.bilibili.multipletheme.widgets.TintFrameLayout android:layout_gravity="bottom" android:id="@id/indicator" android:background="@drawable/ic_bangumi_ep_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/selector_bangumi_indicator" app:backgroundTint="@color/selector_bangumi_pressed_gary" app:backgroundTintMode="multiply">
-        <TextView android:textAppearance="@style/TextAppearance.App.Tab.Title" android:gravity="center" android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:minHeight="36.0dip" />
-    </com.bilibili.multipletheme.widgets.TintFrameLayout>
-    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/badge1" android:background="@drawable/shape_circle" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" />
-    <ImageView android:layout_gravity="center|right|top" android:id="@id/badge2" android:padding="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/text_new" android:contentDescription="@null" />
-</FrameLayout>

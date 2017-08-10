@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.RoundCardFrameLayout android:background="@color/theme_color_card" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <tv.danmaku.bili.widget.ForegroundRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground"
-      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-        <com.bilibili.multipletheme.widgets.TintImageView android:id="@id/image_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/ic_add" android:scaleType="centerInside" android:layout_centerInParent="true" app:imageTint="@color/gray_trans" />
-    </tv.danmaku.bili.widget.ForegroundRelativeLayout>
-</tv.danmaku.bili.widget.RoundCardFrameLayout>

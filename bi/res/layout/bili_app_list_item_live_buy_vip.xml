@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/icon" android:layout_width="@dimen/live_vip_icon" android:layout_height="@dimen/live_vip_icon" app:placeholderImage="@drawable/bili_default_image_tv_16_10" app:placeholderImageScaleType="fitCenter" app:actualImageScaleType="fitCenter" />
-    <com.bilibili.multipletheme.widgets.TintTextView android:textSize="@dimen/text_size_small" android:textColor="?android:textColorSecondary" android:gravity="center_horizontal" android:id="@id/desc" android:paddingBottom="@dimen/item_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_half_spacing" />
-</LinearLayout>

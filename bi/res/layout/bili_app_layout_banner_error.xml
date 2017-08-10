@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.bilibili.multipletheme.widgets.TintLinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/theme_color_view_background" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/error_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_tips_error_banner_2233" />
-    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip">
-        <TextView android:textSize="13.0sp" android:textColor="@color/gray_dark" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/banner_error" />
-        <com.bilibili.multipletheme.widgets.TintTextView android:textSize="15.0sp" android:textColor="@color/theme_color_secondary" android:gravity="center" android:id="@id/retry" android:background="@drawable/selector_button_gray_stroke_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/reload" android:height="36.0dip" android:width="100.0dip" />
-    </LinearLayout>
-</com.bilibili.multipletheme.widgets.TintLinearLayout>

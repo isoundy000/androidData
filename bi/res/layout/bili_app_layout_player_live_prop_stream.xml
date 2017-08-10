@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.ui.player.live.propstream.LiveComboPropStreamDisplayView android:id="@id/combo_stream" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:maxCount="3" />
-    <tv.danmaku.bili.ui.player.live.propstream.LiveNoComboPropStreamDisplayView android:id="@id/no_combo_stream" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:maxCount="3" />
-    <TextSwitcher android:textSize="@dimen/text_size_medium" android:id="@id/switcher" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginTop="@dimen/item_spacing" android:layout_marginRight="@dimen/item_spacing" android:layout_marginBottom="@dimen/item_large_spacing" android:minHeight="32.0dip" android:inAnimation="@anim/slide_in_from_bottom" android:outAnimation="@anim/slide_out_to_top" />
-</LinearLayout>

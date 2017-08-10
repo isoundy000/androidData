@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="fill_parent" fresco:actualImageScaleType="focusCrop" xmlns:fresco="http://schemas.android.com/apk/res-auto" />
-    <tv.danmaku.bili.widget.ScalableImageView android:layout_gravity="center" android:id="@id/image_video_play" android:background="@drawable/ic_game_detail_video_play" android:layout_width="54.0dip" android:layout_height="54.0dip" xmlns:fresco="http://schemas.android.com/apk/res-auto" />
-</FrameLayout>

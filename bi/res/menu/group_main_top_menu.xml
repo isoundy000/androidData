@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@id/message" android:title="@string/nav_notifications" app:showAsAction="ifRoom" app:actionLayout="@layout/bili_app_layout_menu_item_newmsg" />
-    <item android:icon="@drawable/ic_toolbar_menu_search" android:id="@id/group_search" android:title="@string/search" app:showAsAction="always" />
-</menu>

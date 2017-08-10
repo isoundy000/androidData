@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.TagsView android:id="@id/tags_layout" android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_spacing" android:paddingTop="12.0dip" android:paddingRight="@dimen/item_spacing" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:spacing="@dimen/item_spacing" app:tagBackground="@drawable/selector_tag_pink" app:tagTextAppearance="@style/TextAppearance.App.Tagview.Pink.Title"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

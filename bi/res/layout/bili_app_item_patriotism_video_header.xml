@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/wave" android:background="#fff74a7f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/patriotism_video_header" android:scaleType="centerCrop" />
-    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_spacing" android:layout_marginTop="@dimen/item_spacing" />
-    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@id/title" android:padding="@dimen/item_half_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/item_spacing" android:layout_toRightOf="@id/icon" android:layout_alignBottom="@id/icon" />
-</RelativeLayout>

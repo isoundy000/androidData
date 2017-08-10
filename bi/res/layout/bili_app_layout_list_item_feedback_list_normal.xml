@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.BLRelativeLayout android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <tv.danmaku.bili.ui.feedback.widget.FeedbackItemInclude android:id="@id/item_include" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</tv.danmaku.bili.widget.BLRelativeLayout>

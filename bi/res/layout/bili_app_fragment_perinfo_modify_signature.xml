@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.bilibili.multipletheme.widgets.TintEditText android:gravity="center|left|top" android:id="@id/signature_edit" android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="100.0dip" android:hint="@string/person_info_signature_hint" android:scrollHorizontally="false" android:singleLine="false" android:maxLength="100" android:inputType="textMultiLine|textNoSuggestions" android:imeOptions="actionDone" style="@style/Widget.App.EditText.Default" />
-    <TextView android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/signature_edit_count" android:paddingLeft="@dimen/item_spacing" android:paddingRight="@dimen/item_spacing" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="100" />
-</LinearLayout>

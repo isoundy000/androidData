@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/content" android:background="@drawable/selector_pink_transparent_border_thin_background" android:paddingLeft="2.0dip" android:paddingTop="@dimen/item_half_spacing" android:paddingRight="2.0dip" android:paddingBottom="@dimen/item_half_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.ui.live.room.gift.pkg.LivePackageView android:id="@id/icon" android:layout_width="@dimen/live_gift_medium" android:layout_height="@dimen/live_gift_medium" />
-    <TextView android:textAppearance="@style/TextAppearance.App.Medium" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" />
-    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Small" android:textColor="@color/theme_color_secondary" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
-</LinearLayout>

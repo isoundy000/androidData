@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:danmaku="http://schemas.android.com/apk/res-auto">
-    <item android:id="@id/menu_download_select_all" android:title="@string/menu_download_select_all" danmaku:showAsAction="always" />
-    <item android:id="@id/menu_discard" android:title="@string/delete" danmaku:showAsAction="always" />
-</menu>

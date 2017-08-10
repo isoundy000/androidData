@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.ForegroundRelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" app:aspectRadioWidth="1" app:aspectRadioHeight="1" />
-    <TextView android:textAppearance="@style/TextAppearance.App.Small" android:textColor="?android:textColorPrimary" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:singleLine="true" android:layout_below="@id/image" android:layout_centerHorizontal="true" android:textAllCaps="true" />
-</tv.danmaku.bili.widget.ForegroundRelativeLayout>

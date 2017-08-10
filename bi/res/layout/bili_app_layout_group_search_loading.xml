@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_marginBottom="40.0dip" android:src="@drawable/search_failed" android:layout_centerInParent="true" />
-    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/theme_color_secondary" android:layout_gravity="center_horizontal" android:id="@id/text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_search_create_group" android:layout_below="@id/image" android:layout_centerHorizontal="true" />
-</RelativeLayout>

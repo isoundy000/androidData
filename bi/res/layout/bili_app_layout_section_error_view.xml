@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.ForegroundRelativeLayout android:gravity="center" android:background="@drawable/bili_default_card_background" android:paddingTop="26.0dip" android:paddingBottom="26.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" app:elevation="2.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Headline" android:textColor="@color/selector_text_pink" android:id="@id/reload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/load_failed_with_click" android:layout_centerInParent="true" />
-</tv.danmaku.bili.widget.ForegroundRelativeLayout>

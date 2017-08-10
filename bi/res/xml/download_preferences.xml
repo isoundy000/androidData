@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/pref_title_screen_downloadPref" android:key="@string/pref_key_screen_downloadPref" android:summary="@string/pref_summary_screen_downloadPref"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:danmaku="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.widget.RadioGroupPreference android:persistent="true" android:entries="@array/DownloadStorageEntries" android:title="@string/pref_title_download_storage" android:key="@string/pref_key_download_storage" android:defaultValue="1" android:entryValues="@array/DownloadStorageValues" danmaku:radioEntries="@array/DownloadStorageEntries" danmaku:radioEntryValues="@array/DownloadStorageValues" danmaku:radioDefaultValue="1" />
-    <PreferenceCategory android:title="@string/pref_title_download_networkOption">
-        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_download_enable_non_wifi" android:key="@string/pref_key_download_enable_non_wifi" android:summary="@string/pref_summary_download_enable_non_wifi" android:defaultValue="false" />
-        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_download_enable_auto_start" android:key="@string/pref_key_download_enable_auto_start" android:summary="@string/pref_summary_download_enable_auto_start" android:defaultValue="false" />
-    </PreferenceCategory>
-</PreferenceScreen>

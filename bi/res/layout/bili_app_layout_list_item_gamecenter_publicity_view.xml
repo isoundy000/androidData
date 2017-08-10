@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.ForegroundRelativeLayout android:id="@id/publicity_view" android:background="@color/theme_color_view_background" android:paddingLeft="@dimen/item_medium_spacing" android:paddingTop="@dimen/item_medium_spacing" android:paddingRight="@dimen/item_medium_spacing" android:paddingBottom="@dimen/item_medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/notice_icon" android:layout_width="30.0dip" android:layout_height="15.0dip" android:layout_marginRight="@dimen/item_spacing" android:src="@drawable/ic_game_publicity" android:layout_centerVertical="true" />
-    <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:id="@id/notice_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:singleLine="true" android:layout_toRightOf="@id/notice_icon" android:layout_centerVertical="true" />
-    <TextView android:textAppearance="@style/TextAppearance.App.Medium" android:textColor="?android:textColorTertiary" android:id="@id/notice_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-</tv.danmaku.bili.widget.ForegroundRelativeLayout>

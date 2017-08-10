@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/videos_layout" android:background="@android:color/black" android:paddingTop="48.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.bilibili.multipletheme.widgets.TintTextView android:textColor="@color/theme_color_secondary" android:id="@id/tip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.App.Large" />
-    <LinearLayout android:gravity="center" android:id="@id/item_choose_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_half_spacing" android:layout_marginBottom="@dimen/item_spacing" android:weightSum="11.0">
-        <include android:id="@id/item_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0" layout="@layout/bili_app_list_item_live_vertical_player_recommend" />
-        <include android:id="@id/item_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_weight="3.0" layout="@layout/bili_app_list_item_live_vertical_player_recommend" />
-    </LinearLayout>
-</LinearLayout>

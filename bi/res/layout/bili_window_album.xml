@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <tv.danmaku.bili.widget.RecyclerView android:id="@id/album_recycleview" android:background="@color/theme_color_window_background" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <View android:id="@id/album_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/album_recycleview" />
-</RelativeLayout>

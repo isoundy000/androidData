@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:background="@color/theme_color_view_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.bilibili.multipletheme.widgets.TintTextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="@color/theme_color_secondary" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_medium_spacing" android:layout_marginBottom="@dimen/item_medium_spacing" android:text="@string/game_center_recommend_more" />
-</FrameLayout>

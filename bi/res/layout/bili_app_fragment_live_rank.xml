@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingTop="@dimen/item_half_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.bilibili.multipletheme.widgets.TintTextView android:textColor="?android:textColorSecondary" android:textColorLink="@color/theme_color_secondary" android:gravity="center" android:linksClickable="true" android:id="@id/desc" android:paddingLeft="@dimen/item_half_spacing" android:paddingTop="2.0dip" android:paddingRight="@dimen/item_half_spacing" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/desc">
-        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/bili_app_layout_recyclerview" />
-        <tv.danmaku.bili.widget.LoadingImageView android:layout_gravity="center" android:id="@id/loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/item_spacing" />
-    </FrameLayout>
-</RelativeLayout>

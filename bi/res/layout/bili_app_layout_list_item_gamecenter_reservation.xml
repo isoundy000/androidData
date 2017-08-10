@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="6.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover" android:layout_width="160.0dip" android:layout_height="100.0dip" android:layout_marginBottom="@dimen/item_half_spacing" app:placeholderImage="@drawable/bili_default_image_tv_16_10" app:placeholderImageScaleType="centerInside" app:actualImageScaleType="centerCrop" app:overlayImage="?selectableItemBackground" app:roundedCornerRadius="6.0dip" />
-    <TextView android:textAppearance="@style/TextAppearance.App.Title" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="100.0dip" android:layout_height="30.0dip" android:layout_marginRight="@dimen/item_large_spacing" android:singleLine="true" android:layout_below="@id/cover" android:layout_centerVertical="true" />
-    <com.bilibili.multipletheme.widgets.TintButton android:textColor="@color/selector_text_pink" android:gravity="center" android:id="@id/button" android:background="@drawable/selector_button_stroke_pink" android:layout_width="52.0dip" android:layout_height="30.0dip" android:singleLine="true" android:layout_below="@id/cover" android:layout_alignRight="@id/cover" android:layout_centerVertical="true" />
-</RelativeLayout>

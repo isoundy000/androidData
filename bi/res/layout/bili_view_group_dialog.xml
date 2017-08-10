@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/group_dialog_header_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/img_tips_error_no_permission" android:layout_centerHorizontal="true" />
-    <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/group_dialog_lv_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/group_dialog_lv0_txt" android:layout_below="@id/group_dialog_header_img" android:layout_centerHorizontal="true" />
-    <com.bilibili.multipletheme.widgets.TintButton android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/group_dialog_group_btn" android:background="@color/theme_color_secondary" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="16.0dip" android:text="@string/group_dialog_lv1_btn" android:layout_below="@id/group_dialog_lv_txt" />
-</RelativeLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.ForegroundRelativeLayout android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackgroundBorderless"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:placeholderImage="@drawable/bili_default_image_tv" app:placeholderImageScaleType="centerInside" app:scaleViewType="fitWidth" app:aspectRadioWidth="320" app:aspectRadioHeight="100" />
-    <View android:background="@drawable/ic_card_border_pink" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/cover" android:layout_alignBottom="@id/cover" />
-</tv.danmaku.bili.widget.ForegroundRelativeLayout>

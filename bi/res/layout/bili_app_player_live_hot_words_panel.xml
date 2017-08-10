@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tv.danmaku.bili.widget.FlowTagView android:id="@id/tags" android:layout_width="fill_parent" android:layout_height="wrap_content" app:maxLines="4" app:flowTagBackground="@drawable/selector_tag_stroke_black_bg" app:flowTagTextAppearance="@style/TextAppearance.App.Tag.White.Title"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

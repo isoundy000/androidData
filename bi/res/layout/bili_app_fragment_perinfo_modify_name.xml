@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:padding="@dimen/item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.bilibili.multipletheme.widgets.TintEditText android:gravity="center_vertical" android:id="@id/name_edit" android:background="@drawable/abc_edit_text_material" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginRight="20.0dip" android:hint="@string/person_info_name_hint" android:singleLine="true" android:imeOptions="actionDone" style="@style/Widget.App.EditText.Default" />
-    <ImageView android:id="@id/clear_name" android:visibility="visible" android:layout_width="20.0dip" android:layout_height="8.0dip" android:layout_marginTop="18.0dip" android:src="@drawable/ic_edittext_clear" android:layout_alignParentRight="true" />
-    <TextView android:textAppearance="@style/TextAppearance.App.Subtitle" android:textColor="@color/gray_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/item_half_spacing" android:text="@string/person_info_warn" android:layout_below="@id/name_edit" />
-</RelativeLayout>

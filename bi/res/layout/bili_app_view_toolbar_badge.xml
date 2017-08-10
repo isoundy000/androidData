@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_menu_top_game_center" android:scaleType="centerInside" />
-    <TextView android:textSize="8.0dip" android:textColor="@color/white" android:layout_gravity="center|right|top" android:id="@id/dot" android:background="@drawable/shape_topbar_menu_badge" android:paddingLeft="3.0dip" android:paddingTop="1.0dip" android:paddingRight="3.0dip" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:layout_marginBottom="28.0dip" />
-</merge>

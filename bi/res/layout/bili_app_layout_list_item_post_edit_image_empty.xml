@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/item_medium_spacing" android:layout_marginRight="@dimen/item_medium_spacing"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <tv.danmaku.bili.widget.ScalableImageView android:id="@id/add" android:layout_width="fill_parent" android:layout_height="fill_parent" app:placeholderImage="@drawable/ic_addpic" app:placeholderImageScaleType="centerInside" app:pressedStateOverlayImage="@color/gray_trans" app:scaleViewType="fitWidth" app:aspectRadioWidth="1" app:aspectRadioHeight="1" />
-</FrameLayout>

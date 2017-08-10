@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/unlock_group" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/ACD_LockView"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/unlock_left" android:background="@drawable/bili_gray_semi_circle_right" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="56.0dip" android:layout_height="112.0dip" android:src="@drawable/ic_player_unlock_2" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@null" style="@style/PlayerControlBarButton" />
-    <ImageView android:id="@id/unlock_right" android:background="@drawable/bili_gray_semi_circle_left" android:paddingLeft="8.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="8.0dip" android:layout_width="56.0dip" android:layout_height="112.0dip" android:src="@drawable/ic_player_unlock_2" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" style="@style/PlayerControlBarButton" />
-</RelativeLayout>
