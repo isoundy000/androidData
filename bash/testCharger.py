@@ -5,6 +5,7 @@ import sys
 from charger import EasyCharger 
 from openpyxl import *
 import datetime
+from compare_excel import CompareEXCEL
 
 def test(filename):
 	print("---start---")
@@ -41,18 +42,29 @@ def saveData(allData,province, filename):
 	sheet1.append(['地区', '异常数量'])
 	for parent_item in allData:
 		data = parent_item['data']
-		province_name = province[parent_item['province']]
-		sheet1.append([province_name, len(data)])
+		province_item = province[parent_item['province']]
+		province_name = province_item['name']
+		lost_count = len(parent_item['data']) + province_item['count']
+		province_item['count'] = lost_count
 		for child_item in data:
-			sheet0.append([province_name, parent_item['statname'], child_item['pgnum'], child_item['pgstatus'], parent_item['address']])
+			status = child_item['pgstatus']
+			str_statu = '失联'
+			if status == 2:
+				str_statu = '损坏'
+			sheet0.append([province_name, parent_item['statname'], child_item['pgnum'],str_statu, parent_item['address']])
+	totalCount = 0
+	for item in province:
+		value = province[item]
+		totalCount = totalCount + value['count']
+		sheet1.append([value['name'], value['count']])
+	sheet1.appedn(['总计', totalCount])
 	book.save(filename)
 	print('---end---')
 
-def getProvince():
-	ch = EasyCharger('qasd')
-	ch.login()
-	ret = ch.getProvinceInfo()
-	print(ret)
+def test1(name):
+	com = CompareEXCEL(name)
+	com.startCompare('123')
+	com.startCompare('5149013215954932-1')
 
 if __name__ == '__main__':
-	test(sys.argv[1])
+	test1(sys.argv[1])

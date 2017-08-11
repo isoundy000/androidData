@@ -62,8 +62,9 @@ class EasyCharger:
 	def filiterLostStatusData(self, ports):
 		lostStatusPorts = []
 		for port in ports:
-			if port["pgstatus"] == 10:	#异常状态
-				per = {"pgstatus":10, "pgnum":port["pgnum"]}
+			status = port['pgstatus']
+			if status == 10 or status == 2:	#异常状态
+				per = {"pgstatus":status, "pgnum":port["pgnum"]}
 				lostStatusPorts.append(per)
 		return lostStatusPorts
 
@@ -75,6 +76,6 @@ class EasyCharger:
 			province = result['provinces']
 			p_dic = {}
 			for item in province:
-				p_dic.setdefault(item['id'], item['name'])
+				p_dic.setdefault(item['id'], {'name':item['name'], 'count':0})
 			return p_dic
 		return 'false'
