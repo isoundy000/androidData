@@ -7,7 +7,7 @@ from openpyxl import *
 import datetime
 from compare_excel import CompareEXCEL
 
-def test(filename):
+def getDataFromNetwork(oldFileData, filename):
 	print("---start---")
 	charger1 = EasyCharger(filename)
 	charger1.login()
@@ -26,11 +26,11 @@ def test(filename):
 		if len(ports) != 0:
 			data = {'province':int(item['province']), 'statname':item['staname'], 'address':item['staaddress'], 'data':ports}
 			allUnormalData.append(data)
-	saveData(allUnormalData,province, filename)
+	saveData(allUnormalData, oldFileData, province, filename)
 			
 #保存数据到xls
 # 类型 0 empty,1 string, 2 number, 3 date, 4 boolean, 5 error
-def saveData(allData,province, filename):
+def saveData(netWorkData, oldFileData, province, filename):
 	book = Workbook()
 	sheet0 = book.create_sheet(u'异常详细表格', 0)
 	sheet1 = book.create_sheet(u'异常总览表', 1) 
@@ -40,31 +40,50 @@ def saveData(allData,province, filename):
 	sheet1.append(['各地区异常数量汇总表'])
 	sheet1.append([''])
 	sheet1.append(['地区', '异常数量'])
-	for parent_item in allData:
+	for parent_item in netWorkData:
 		data = parent_item['data']
 		province_item = province[parent_item['province']]
 		province_name = province_item['name']
 		lost_count = len(parent_item['data']) + province_item['count']
 		province_item['count'] = lost_count
+		eData = []
 		for child_item in data:
 			status = child_item['pgstatus']
 			str_statu = '失联'
 			if status == 2:
 				str_statu = '损坏'
-			sheet0.append([province_name, parent_item['statname'], child_item['pgnum'],str_statu, parent_item['address']])
+			portNum = child_item['pgnum']
+			if oldFileData is None or 'add' !=  oldFileData.startCompare(portNum):
+				eData = [province_name, parent_item['statname'],portNum,str_statu, parent_item['address']]
+			else:
+				eData = [province_name, parent_item['statname'],portNum,str_statu, parent_item['address'], 'add']
+			saveDataToExcel(sheet0, eData)
 	totalCount = 0
 	for item in province:
 		value = province[item]
 		totalCount = totalCount + value['count']
 		sheet1.append([value['name'], value['count']])
-	sheet1.appedn(['总计', totalCount])
+	if oldFileData is not None:
+		sheet1.append(['总计', totalCount])
+		sheet1.append([''])
+		sheet1.append([''])
+		sheet1.append([''])
+		sheet1.append(['与昨日对比情况'])
+		sheet1.append(['新增', '已解决', '未解决'])
+		sheet1.append([oldFileData.getAdd(), oldFileData.getSub(), oldFileData.getUnslove()])
 	book.save(filename)
 	print('---end---')
 
-def test1(name):
-	com = CompareEXCEL(name)
-	com.startCompare('123')
-	com.startCompare('5149013215954932-1')
+def saveDataToExcel(sheet, data):
+	sheet.append(data)
+
+def main(oldFile, newFile):
+	com = None
+	if os.path.isfile(oldFile):
+		com = CompareEXCEL(oldFile)
+	getDataFromNetwork(com, newFile)
 
 if __name__ == '__main__':
-	test1(sys.argv[1])
+	print('bash use rules:')
+	print('parameter 1~2: oldExceFile, newExcelFile')
+	main(sys.argv[1], sys.argv[2])

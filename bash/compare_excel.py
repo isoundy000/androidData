@@ -14,13 +14,16 @@ class CompareEXCEL:
 		self.sub = 0
 		self.init_old_excel()
 
+	#比较函数  新增的add+1并且返回add字符串
 	def startCompare(self, target):
 		try:
 			key = self.dic[target]
 		except KeyError:
 			self.add = self.add + 1
+			return 'add'
 		else:
 			self.unslove = self.unslove + 1
+			return 'unslove'
 
 	def init_old_excel(self):
 		if os.path.isfile(self.oldF):
