@@ -76,6 +76,6 @@ class EasyCharger:
 			province = result['provinces']
 			p_dic = {}
 			for item in province:
-				p_dic.setdefault(item['id'], {'name':item['name'], 'count':0})
+				p_dic.setdefault(item['id'], {'name':item['name']})
 			return p_dic
 		return 'false'
