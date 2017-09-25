@@ -11,9 +11,8 @@ from compare_excel import CompareEXCEL
 
 class ChargerManager:
 	
-	def __init__(self, charger, old_file, new_file, code):
+	def __init__(self, charger):
 		self.charger = charger
-		self.main(old_file, new_file, code)
 	
 	#获取所有的项目
 	def getAllProject(self, xlsfile):
@@ -43,7 +42,6 @@ class ChargerManager:
 	#获取所有异常数据
 	def getDataFromNetwork(self, oldFileData, filename, code):
 		print("---start---")
-		self.charger.login(code)
 		province = self.charger.getProvinceInfo()
 		result = self.charger.listAllProvinceData()
 		if result == "false" or province == 'false':
@@ -66,7 +64,7 @@ class ChargerManager:
 				data = {'province':int(item['province']), 'statname':item['staname'], 'address':item['staaddress'], 'data':ports}
 				allUnormalData.append(data)
 			all_proj.setdefault(item['staname'], {'proj_name': item['staname'],'province':provinceItem['name'], 'all_port': item['blug'], 'lost_port':length, 'new_lost_port': 0})
-		self.saveData(allUnormalData, oldFileData, filename, all_proj)
+		return self.saveData(allUnormalData, oldFileData, filename, all_proj)
 				
 	#保存数据到xls
 	# 类型 0 empty,1 string, 2 number, 3 date, 4 boolean, 5 error
@@ -112,15 +110,21 @@ class ChargerManager:
 		sheet1.append(['合计', '', totalPortCount, totalLostCount, totalNewPort])
 		book.save(filename)
 		print('---end---')
+		return 'true'
 
 	def saveDataToExcel(self, sheet, data):
 		sheet.append(data)
 
 	def main(self, oldFile, newFile, code):
+		ret = self.charger.login(code)
+		if ret != 'true':
+			return ret
 		com = None
 		if os.path.isfile(oldFile):
 			exec_utils = CompareEXCEL(oldFile)		#获得excel对比工具
-		self.getDataFromNetwork(exec_utils, newFile, code)
+		else:
+			exec_utils = None
+		return self.getDataFromNetwork(exec_utils, newFile, code)
 
 if __name__ == '__main__':
 	print('bash use rules:')

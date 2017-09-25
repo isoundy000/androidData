@@ -21,10 +21,13 @@ class EasyCharger:
 		data = {"mobile":"admin","password":"16E740FC857D742F1705CE4C997CD5C8"}
 		data.setdefault('code', code)
 		result = self.network(url, data)
-		str_token = result["token"]
-		self.token = str_token
-		self.type.setdefault("Token", str_token)
-		return str_token
+		try:
+			str_token = result["token"]
+			self.token = str_token
+			self.type.setdefault("Token", str_token)
+			return 'true' 
+		except KeyError as ke:
+			return '登录失败，请刷新验证码重新开始分析'
 
 	# 登录的图片验证码
 	def validation(self):
