@@ -40,7 +40,7 @@ class ChargerManager:
 		book.save(xlsfile)
 
 	#获取所有异常数据
-	def getDataFromNetwork(self, oldFileData, filename, code):
+	def getLostDataFromNetwork(self, oldFileData, filename, code):
 		print("---start---")
 		province = self.charger.getProvinceInfo()
 		result = self.charger.listAllProvinceData()
@@ -55,17 +55,60 @@ class ChargerManager:
 				continue 
 			provinceId = int(item['province'])
 			provinceItem = province[provinceId]
-			result = self.charger.findPortPerStation(item['staid'],item['blug'])	#每个充电站的结果
-			if result == "false":
+			result1 = self.charger.findPortPerStation(item['staid'],item['blug'])	#每个充电站的结果
+			if result1 == "false":
 				continue
-			ports = self.charger.filiterLostStatusData(result)				# 过滤每个结果，得到异常的数据
+			ports = self.charger.filiterLostStatusData(result1)				# 过滤每个结果，得到异常的数据
 			length = len(ports)
 			if length != 0:
 				data = {'province':int(item['province']), 'statname':item['staname'], 'address':item['staaddress'], 'data':ports}
 				allUnormalData.append(data)
 			all_proj.setdefault(item['staname'], {'proj_name': item['staname'],'province':provinceItem['name'], 'all_port': item['blug'], 'lost_port':length, 'new_lost_port': 0})
 		return self.saveData(allUnormalData, oldFileData, filename, all_proj)
-				
+	
+	#获取所有数据  正常和异常
+	def getAllDataFromNetwork(self, filename, code):
+		print("---start---")
+		province = self.charger.getProvinceInfo()
+		result = self.charger.listAllProvinceData()
+		if result == "false" or province == 'false':
+			return "false"
+		allData = []
+		all_proj = {}
+		all_gate = []
+		for item in result:
+			if item["blug"] == 0:
+				continue
+			provinceId = int(item['province'])
+			provinceItem = province[provinceId]
+			result_port = self.charger.findPortPerStation(item['staid'],item['blug'])	#每个充电站的充电端口结果
+			result_gateway = self.charger.findGateway(item['staid'])
+			if result_port == "false" or result_gateway == 'false':
+				continue
+			length = len(result_port)
+			if length != 0:
+				data = {'province':int(item['province']), 'statname':item['staname'], 'address':item['staaddress'], 'data':result_port}
+				allData.append(data)
+			all_proj.setdefault(item['staname'], {'proj_name': item['staname'],'province':provinceItem['name'], 'all_port': item['blug'], 'lost_port':length, 'new_lost_port': 0})
+			length_gateway = len(result_gateway)
+			if length_gateway != 0:
+				data1 = {'statname':item['staname'], 'data':result_gateway}
+				all_gate.append(data1)
+		self.saveGatewayData(all_gate)	
+		return self.saveData(allData, None, filename, all_proj)
+			
+	#save网关
+	def saveGatewayData(self, data):
+		book = Workbook()	
+		sheet0 = book.create_sheet(u'网关表格')
+		sheet0.append(['电站名', '网关号'])
+		for item in data:
+			staname = item['statname']
+			for iitem in item['data']:
+				savedata = [staname, iitem['devimeiStr']]
+				sheet0.append(savedata)
+		book.save('gateway.xls')
+
 	#保存数据到xls
 	# 类型 0 empty,1 string, 2 number, 3 date, 4 boolean, 5 error
 	def saveData(self, netWorkData, oldFileData, filename, all_proj):
@@ -124,7 +167,7 @@ class ChargerManager:
 			exec_utils = CompareEXCEL(oldFile)		#获得excel对比工具
 		else:
 			exec_utils = None
-		return self.getDataFromNetwork(exec_utils, newFile, code)
+		return self.getLostDataFromNetwork(exec_utils,newFile, code)
 
 if __name__ == '__main__':
 	print('bash use rules:')

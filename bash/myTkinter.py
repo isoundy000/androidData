@@ -50,7 +50,7 @@ class ChargeDataAnalysis:
 		Label(self.window, text=tips, font=self.label_font, fg='blue').pack(side=BOTTOM, pady=10)
 	# 输入的历史文件		
 	def click_input(self,event):
-		filename = tkFileDialog.askopenfilename(initialdir = '/Users/sever1')
+		filename = tkFileDialog.askopenfilename(initialdir = os.getcwd())
 		self.old_file_path.set(filename)
 	
 	# 分析开始点击事件
@@ -78,9 +78,9 @@ class ChargeDataAnalysis:
 			self.chargerManager = ChargerManager(self.charger)
 		ret = self.chargerManager.main(old_file, new_file, code)
 		if ret != 'true':
-			messagebox.showinfo(title='分析数据失败', message = ret)
+			messagebox.showinfo(title='结果提示', message = '失败\n'+ ret)
 		else: 
-			messagebox.showinfo(title = '分析数据成功', message = ('文件存放在:%s'%new_file))
+			messagebox.showinfo(title = '结果提示', message = ('成功\n文件存放在:%s'%new_file))
 	
 	# 刷新图片事件
 	def freshImage(self):

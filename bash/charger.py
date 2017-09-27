@@ -5,20 +5,24 @@
 import sys
 import urllib2
 import json
-import os
 import imageio
+import hashlib
 
 host = 'http://www.taxiaides.com/xyyc/'
+#host = 'http://yzj1688.com/xyyc/'
 
 class EasyCharger:
 	type = {'Content-Type': 'application/json'}
 	def __init__(self, output_file_name):
 		self.filename = output_file_name
 		self.token = 'null'
+		self.passwd = 'zywlw_cd'
 	# 登录
 	def login(self, code):
 		url = host + 'login'
-		data = {"mobile":"admin","password":"16E740FC857D742F1705CE4C997CD5C8"}
+		data = {"mobile":"admin"}
+		data.setdefault('password',self.md5_str())
+		#data = {"mobile":"admin","password":"670B14728AD9902AECBA32E22FA4F6BD"}
 		data.setdefault('code', code)
 		result = self.network(url, data)
 		try:
@@ -73,7 +77,18 @@ class EasyCharger:
 		ret =  self.checkResponse(result)
 		if ret == "true":
 			return result["rows"]
-		return ret				
+		return ret
+				
+	# 查看每个电站的网关
+	def findGateway(self, staid):
+		url = host + 'device/selectGateway'
+		data = {"currentPage":1,"itemsPerPage":100, "devtype":1, "devstaid":staid}
+		result = self.network(url, data)
+		ret =  self.checkResponse(result)
+		if ret == "true":
+			return result["rows"]
+		return ret	
+		
 
 	#网络访问部分
 	def network(self, url, data):
@@ -108,8 +123,13 @@ class EasyCharger:
 				p_dic.setdefault(item['id'], {'name':item['name']})
 			return p_dic
 		return 'false'
+	def md5_str(self):
+		m = hashlib.md5()
+		m.update(self.passwd)
+		code = m.hexdigest()
+		return code
 
 if __name__ == '__main__':
 	charger = EasyCharger('xxx')
-	ret = charger.validation()
+	charger.md5_str('zywlw_cd')
 	print ret
