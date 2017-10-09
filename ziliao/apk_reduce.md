@@ -70,7 +70,7 @@ java -jar /Users/sever1/shell/third/apksigner.jar sign  --ks /Users/sever1/shell
 + 解开包后，删除掉smali目录下R文件除R.smali R$style.smali R$stleable.smali之外的其他几个R文件
 + apktool和包签名即可
 
-![demo](delete_r.png)
+![delete_r.png](http://upload-images.jianshu.io/upload_images/5790991-408c0dfdb0118068.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 最后，能减小apk不少的体积
 
