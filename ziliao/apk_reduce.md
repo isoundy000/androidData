@@ -62,3 +62,23 @@ java -jar /Users/sever1/shell/third/apksigner.jar sign  --ks /Users/sever1/shell
 ```
 刚刚试了一把，发现apk少了5M
 
+## 删除部分R文件
+
+随着项目越来越大，资源文件R会越来越大，大家都知道Android读取资源文件时java里面都是通过R.x.x读取的，再到R.java里面得到资源对应的ID,再回通过ID去resource.asrc里面找到我们的资源显示即可；看看这个读取过程，其实我们可以省去java的R.x.x读取方式，直接在Java里面用ID读取，这里我们可以用Python自己写个脚本完成；现在Android studio新版本应该是做了脚本这一步，我们所需要做的就是拿到打好的apk，然后完成以下几步
+
++ apktool解包
++ 解开包后，删除掉smali目录下R文件除R.smali R$style.smali R$stleable.smali之外的其他几个R文件
++ apktool和包签名即可
+
+![demo](delete_R.jpg)
+
+最后，能减小apk不少的体积
+
+## 其它资源策略
+1.首先考虑能否不用图片，比如使用shape代码实现。
+
+2.其次如果用图片的话，能否优先使用.9图来简化图片。
+
+3.采用svg矢量图和VectorDrawable类来替换传统的图片。
+
+4.如果图片只是旋转角度或者颜色不同，可以用代码实现变换。
