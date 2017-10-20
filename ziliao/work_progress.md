@@ -17,6 +17,10 @@
 
 [pyinstaller打包][8]
 
+[scrollerview嵌套listview，listview嵌套listview滑动冲突解决][9]
+
+[解决HierarchyViewer不能连接真机的问题][10]
+
 [1]:https://mp.weixin.qq.com/s?__biz=MzI2OTQxMTM4OQ==&mid=2247485000&idx=1&sn=2d74c597c62c9c4229f79cce9587b6bf&chksm=eae1f31add967a0cddf98dd3bbf529b50420bbf7a9cb6b238e6e6fe993c8bd8ba5cca728e0da#rd
 [2]:https://yq.aliyun.com/articles/71687
 [3]:https://androidtest.org/android-graphics-performance-pattens/
@@ -25,3 +29,5 @@
 [6]:http://blog.csdn.net/lpjishu/article/details/50905673
 [7]:http://gityuan.com/2016/03/06/start-service/
 [8]:http://blog.topspeedsnail.com/archives/6584
+[9]:http://blog.csdn.net/zhaokaiqiang1992/article/details/38585547
+[10]:http://www.cnblogs.com/fatfatdachao/p/4403282.html
