@@ -21,6 +21,10 @@
 
 [解决HierarchyViewer不能连接真机的问题][10]
 
+[C内存的结构][11]
+
+[so类型的elf文件格式详解][12]
+
 [1]:https://mp.weixin.qq.com/s?__biz=MzI2OTQxMTM4OQ==&mid=2247485000&idx=1&sn=2d74c597c62c9c4229f79cce9587b6bf&chksm=eae1f31add967a0cddf98dd3bbf529b50420bbf7a9cb6b238e6e6fe993c8bd8ba5cca728e0da#rd
 [2]:https://yq.aliyun.com/articles/71687
 [3]:https://androidtest.org/android-graphics-performance-pattens/
@@ -31,3 +35,5 @@
 [8]:http://blog.topspeedsnail.com/archives/6584
 [9]:http://blog.csdn.net/zhaokaiqiang1992/article/details/38585547
 [10]:http://www.cnblogs.com/fatfatdachao/p/4403282.html
+[11]:http://www.cnblogs.com/fengyv/p/3789252.html
+[12]:http://www.wjdiankong.cn/android%E9%80%86%E5%90%91%E4%B9%8B%E6%97%85-soelf%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/
