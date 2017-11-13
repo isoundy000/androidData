@@ -11,6 +11,7 @@ import sys
 
 class ChargeDataAnalysis:
 	def __init__(self, charger):
+		self.server = 'ChongQing2'
 		self.charger = charger			#充电管理类
 		self.chargerManager = None
 		self.window = Tk()		#创建一个窗口
@@ -22,10 +23,43 @@ class ChargeDataAnalysis:
 		self.label_font = tkFont.Font(family='Helvetica', size=15)
 		self.input_font = tkFont.Font(family='Helvetica', size=12)
 		self.author_font = tkFont.Font(family='Fixdsys', size=20)
+		self.init_ui_menu()
 		self.init_ui()
 		self.window.mainloop()
+		
+
+	def init_ui_menu(self):
+		self.menuBg = Menu(self.window)
+		ServerMenu = Menu(self.menuBg)
+		ServerMenu.add_command(label="ChongQing2", command=self.chongqing2)  
+		ServerMenu.add_command(label="HeChi", command=self.hechi)
+		self.menuBg.add_cascade(label="服务器环境选择", menu=ServerMenu)
+		self.window.config(menu=self.menuBg)
+	
+	def chongqing2(self):
+		if 'ChongQing2' == self.server:
+			return
+		self.server = 'ChongQing2'
+		self.chooseServer()
+
+	def hechi(self):
+		if 'hechi' == self.server:
+			return
+		self.server = 'hechi'
+		self.chooseServer()
+
+	def chooseServer(self):
+		if 'hechi' == self.server:
+			self.server_str['text'] = '河池服务器'
+			self.charger.update_net(2)
+		else:
+			self.server_str['text'] = '重庆第二套环境'
+			self.charger.update_net(1)
+		self.freshImage()
 
 	def init_ui(self):
+		self.server_str = Label(self.window, text='重庆第二套环境', font=self.label_font, fg='red')
+		self.server_str.pack(side=TOP)
 		la = Label(self.window,  text='输入昨日统计文件', font=self.label_font)
 		la.pack(side=TOP)
 		history_file = Entry(self.window, state = 'disabled',borderwidth = 3, width = 30, textvariable=self.old_file_path, font=self.input_font)

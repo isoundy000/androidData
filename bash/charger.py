@@ -8,34 +8,47 @@ import json
 import imageio
 import hashlib
 
-host = 'http://www.taxiaides.com/xyyc/'
-#host = 'http://yzj1688.com/xyyc/'
+host_chongqing2 = 'http://www.taxiaides.com/xyyc/'
+host_hechi = 'http://yzj1688.com/xyyc/'
+user_chongqing2 = 'admin'
+user_hechi = 'zywlw'
 
 class EasyCharger:
-	type = {'Content-Type': 'application/json'}
+	type = {'Content-Type': 'application/json', 'Token':'null'}
 	def __init__(self, output_file_name):
+		self.host = host_chongqing2
+		self.user = user_chongqing2
 		self.filename = output_file_name
 		self.token = 'null'
 		self.passwd = 'zywlw_cd'
+
+	#更新服务器地址1-chongqing2  2-hechi
+	def update_net(self, server_flag):
+		if 1 == server_flag:
+			self.host = host_chongqing2
+			self.user = user_chongqing2
+		else:
+			self.host = host_hechi
+			self.user = user_hechi
+	
 	# 登录
 	def login(self, code):
-		url = host + 'login'
-		data = {"mobile":"admin"}
+		url = self.host + 'login'
+		data = {"mobile":self.user}
 		data.setdefault('password',self.md5_str())
-		#data = {"mobile":"admin","password":"670B14728AD9902AECBA32E22FA4F6BD"}
 		data.setdefault('code', code)
 		result = self.network(url, data)
 		try:
 			str_token = result["token"]
 			self.token = str_token
-			self.type.setdefault("Token", str_token)
+			self.type['Token'] = str_token
 			return 'true' 
 		except KeyError as ke:
 			return '登录失败，请刷新验证码重新开始分析'
 
 	# 登录的图片验证码
 	def validation(self):
-		url = host + 'validation'
+		url = self.host + 'validation'
 		result = self.network(url, None)
 		image = open('t.png', 'wb')
 		image.write(result)
@@ -51,7 +64,7 @@ class EasyCharger:
 
 	# 所有充电站的总表
 	def listAllProvinceData(self):
-		url = host + 'device/selectStaion'
+		url = self.host + 'device/selectStaion'
 		data = {"currentPage":1,"itemsPerPage":10}
 		result = self.network(url, data)
 		ret = self.checkResponse(result)
@@ -71,7 +84,7 @@ class EasyCharger:
 		
 	# 每个充电站的具体信息 staid充电站id count 总共的条数
 	def findPortPerStation(self, staid, count):
-		url = host + 'plug/selectDevice'
+		url = self.host + 'plug/selectDevice'
 		data = {"currentPage":1,"itemsPerPage":count, "devtype":2, "pestaid":staid}
 		result = self.network(url, data)
 		ret =  self.checkResponse(result)
@@ -81,7 +94,7 @@ class EasyCharger:
 				
 	# 查看每个电站的网关
 	def findGateway(self, staid):
-		url = host + 'device/selectGateway'
+		url = self.host + 'device/selectGateway'
 		data = {"currentPage":1,"itemsPerPage":100, "devtype":1, "devstaid":staid}
 		result = self.network(url, data)
 		ret =  self.checkResponse(result)
@@ -113,7 +126,7 @@ class EasyCharger:
 		return lostStatusPorts
 
 	def getProvinceInfo(self):
-		url = host + "common/provinces"
+		url = self.host + "common/provinces"
 		data = {}
 		result = self.network(url, data)
 		if result is not None:

@@ -39,6 +39,14 @@ class ChargerManager:
 			sheet0.append(data)
 		book.save(xlsfile)
 
+
+# 大数据结构展示
+#
+#	    ---- ‘staname’: {'proj_name', 'province', 'all_port', 'lost_port', 'error_port', 'new_lost_port'}
+# all_proj{}
+#
+#
+
 	#获取所有异常数据
 	def getLostDataFromNetwork(self, oldFileData, filename, code):
 		print("---start---")
@@ -63,7 +71,7 @@ class ChargerManager:
 			if length != 0:
 				data = {'province':int(item['province']), 'statname':item['staname'], 'address':item['staaddress'], 'data':ports}
 				allUnormalData.append(data)
-			all_proj.setdefault(item['staname'], {'proj_name': item['staname'],'province':provinceItem['name'], 'all_port': item['blug'], 'lost_port':length, 'new_lost_port': 0})
+			all_proj.setdefault(item['staname'], {'proj_name': item['staname'],'province':provinceItem['name'], 'all_port': item['blug'], 'lost_port':length, 'error_port':0, 'new_lost_port': 0})
 		return self.saveData(allUnormalData, oldFileData, filename, all_proj)
 	
 	#获取所有数据  正常和异常
@@ -94,7 +102,7 @@ class ChargerManager:
 			if length_gateway != 0:
 				data1 = {'statname':item['staname'], 'data':result_gateway}
 				all_gate.append(data1)
-		self.saveGatewayData(all_gate)	
+		#self.saveGatewayData(all_gate)	
 		return self.saveData(allData, None, filename, all_proj)
 			
 	#save网关
@@ -121,18 +129,20 @@ class ChargerManager:
 		sheet0.append(['地区','充电站名称','端口编号','状态','详细地址','备注'])
 		sheet1.append(['各地区异常数量汇总表'])
 		sheet1.append([''])
-		sheet1.append(['地区', '项目名称', '所有端口', '异常数量','新增异常数量'])
+		sheet1.append(['地区', '项目名称', '所有端口', '失联数量', '故障数量', '新增异常数量'])
 		for parent_item in netWorkData:
 			data = parent_item['data']
 			current_proj = all_proj[parent_item['statname']]
 			province_name = current_proj['province']
 			new_lost_count = 0
 			eData = []
+			errorNumber = 0
 			for child_item in data:
 				status = child_item['pgstatus']
 				str_statu = '失联'
 				if status == 2:
-					str_statu = '损坏'
+					str_statu = '故障'
+					errorNumber = errorNumber + 1
 				portNum = child_item['pgnum']
 				if oldFileData is None or 'add' !=  oldFileData.startCompare(portNum):
 					eData = [province_name, parent_item['statname'],portNum,str_statu, parent_item['address']]
@@ -141,16 +151,20 @@ class ChargerManager:
 					eData = [province_name, parent_item['statname'],portNum,str_statu, parent_item['address'], 'add']
 				self.saveDataToExcel(sheet0, eData)
 			current_proj['new_lost_port'] = new_lost_count
-		totalLostCount = 0	#所有异常端口数量
+			current_proj['error_port'] = errorNumber
+			current_proj['lost_port'] = current_proj['lost_port'] - errorNumber
+		totalLostCount = 0	#所有失联类型端口
+		totalErrorCount = 0	#所有故障类型端口
 		totalPortCount = 0	 #所有端口数量
-		totalNewPort = 0	#新增异常
+		totalNewPort = 0	#新增失联+故障
 		for item in all_proj:
 			value = all_proj[item]
-			sheet1.append([value['province'], item ,value['all_port'],value['lost_port'], value['new_lost_port']])
+			sheet1.append([value['province'], item ,value['all_port'],value['lost_port'], value['error_port'], value['new_lost_port']])
 			totalLostCount = totalLostCount + value['lost_port']
 			totalPortCount = totalPortCount + value['all_port']
+			totalErrorCount = totalErrorCount + value['error_port']
 			totalNewPort = totalNewPort + value['new_lost_port']
-		sheet1.append(['合计', '', totalPortCount, totalLostCount, totalNewPort])
+		sheet1.append(['合计', '', totalPortCount, totalLostCount, totalErrorCount, totalNewPort])
 		book.save(filename)
 		print('---end---')
 		return 'true'
