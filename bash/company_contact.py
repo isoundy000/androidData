@@ -64,5 +64,6 @@ def saveToXls(personInfo):
 			sheet0.append(data)
 	book.save('persons.xls')
 
+# 参数要通过抓包工具抓到登录用户的token在填写进来
 if __name__ == '__main__':
 	main(sys.argv[1])
