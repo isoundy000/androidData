@@ -9,6 +9,7 @@ from openpyxl import *
 import datetime
 from compare_excel import CompareEXCEL
 
+import xlrd
 class ChargerManager:
 	
 	def __init__(self, charger):
@@ -172,6 +173,48 @@ class ChargerManager:
 	def saveDataToExcel(self, sheet, data):
 		sheet.append(data)
 
+
+	def form_xls_add_device(self, filepath, code):
+		ret = self.charger.login(code)
+		value = self.init_baimingdan(filepath)
+		return  value
+
+	def init_baimingdan(self, filepath):
+		failedstr = []
+		if filepath.endswith('.xls') and os.path.isfile(filepath):
+			wb = xlrd.open_workbook(filepath)
+			sheets = wb.sheets()	#获取所有表格的名字
+			sheet0 = sheets[0]			#获取第一个表格
+			rows = sheet0.nrows
+			key0 = sheet0.cell(0,0).value
+			key1 = sheet0.cell(0,1).value
+			key2 = sheet0.cell(0,2).value
+			key3 = sheet0.cell(0,3).value
+			rows = rows - 1
+			for row in range(rows):
+				data = {}
+				data['rows'] = []
+				row_data = {}
+				row_data[key0] = sheet0.cell(row+1,0).value
+				row_data[key1] = sheet0.cell(row+1,1).value
+				row_data[key2] = sheet0.cell(row+1,2).value
+				row_data[key3] = sheet0.cell(row+1,3).value
+				data['rows'].append(row_data)
+				value = self.charger.add_device_data(data)
+				if value != 1:
+					failedstr.append(row_data['actcode'])
+		else:
+			return '批量文件错误'
+		if len(failedstr) == 0:
+			return '添加白名单成功'
+		else:
+			str = '以下数据添加失败：\n'
+			for fail in failedstr:
+				str = str + fail
+			return str
+					
+
+
 	def main(self, oldFile, newFile, code):
 		ret = self.charger.login(code)
 		if ret != 'true':
@@ -183,8 +226,14 @@ class ChargerManager:
 			exec_utils = None
 		return self.getLostDataFromNetwork(exec_utils,newFile, code)
 
+	
+
 if __name__ == '__main__':
 	print('bash use rules:')
 	print('parameter 1~2: oldExceFile, newExcelFile')
-	main(sys.argv[1], sys.argv[2])
+#	main(sys.argv[1], sys.argv[2])
 #	getAllProject(sys.argv[1])
+	charg = EasyCharger('test')	
+	test = ChargerManager(charg)
+	test.form_xls_add_device(None)
+

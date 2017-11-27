@@ -142,6 +142,19 @@ class EasyCharger:
 		code = m.hexdigest()
 		return code
 
+#	{
+#	"rows": [{
+#		"actcode": "22222",
+#		"actimei": "22222",
+#		"acttype": "2",
+#		"deviceCompany": "0"
+#	}]
+#	}	
+	def add_device_data(self, data):
+		url = self.host + 'device/addActivation'
+		value = self.network(url, data)
+		return value['code']
+
 if __name__ == '__main__':
 	charger = EasyCharger('xxx')
 	charger.md5_str('zywlw_cd')

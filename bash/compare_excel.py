@@ -44,6 +44,31 @@ class CompareEXCEL:
 			print('error')
 
 
+	def init_bai_ming_dan_excel(self):
+		file = self.oldF
+		if file.endswith('.xls') and os.path.isfile(file):
+			wb = xlrd.open_workbook(self.oldF)
+			sheets = wb.sheets()	#获取所有表格的名字
+			sheet0 = sheets[0]			#获取第一个表格
+			rows = sheet0.nrows
+			key0 = sheet0.cell(0,0).value
+			key1 = sheet0.cell(0,1).value
+			key2 = sheet0.cell(0,2).value
+			key3 = sheet0.cell(0,3).value
+			data = {}
+			data['rows'] = []
+			rows = rows - 1
+			for row in range(rows):
+				row_data = {}
+				row_data[key0] = sheet0.cell(row+1,0).value
+				row_data[key1] = sheet0.cell(row+1,1).value
+				row_data[key2] = sheet0.cell(row+1,2).value
+				row_data[key3] = sheet0.cell(row+1,3).value
+				data['rows'].append(row_data)
+			return data
+		else:
+			return 'false'
+
 	def getAdd(self):
 		return self.add
 
