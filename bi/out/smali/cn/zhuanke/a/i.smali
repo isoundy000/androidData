@@ -91,6 +91,9 @@
 
     invoke-direct {v3, p0, v4, v5}, Lcn/zhuanke/a/j;-><init>(Lcn/zhuanke/a/i;Lcn/zhuanke/base/ZKBaseActivity;Lcn/zhuanke/model/tagDownTaskListItem;)V
 
+	const-string v5, "jackzhous"
+	invoke-static {v5, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-static {v1, v2, v0, v3}, Lcom/fclib/b/f;->a(Lcom/fclib/base/BaseActivity;Ljava/lang/String;Ljava/lang/String;Lcom/fclib/b/h;)V
 
     return-void

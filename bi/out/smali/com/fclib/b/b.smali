@@ -96,7 +96,7 @@
     move-result-object v1
 
     const-string v2, "HttpRequest"
-
+	invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "sendData=="

@@ -861,7 +861,6 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-	invoke-static {v0} ,Lcn/zhuanke/ui/TaskListActivity;->showLog(Ljava/lang/String;)V	
     invoke-virtual {v2, v0}, Landroid/widget/RelativeLayout;->setTag(Ljava/lang/Object;)V
 
     iput p1, v1, Lcn/zhuanke/a/k;->l:I
