@@ -11,7 +11,7 @@ _example.mp4：位于当前路径下_
 一键完成试玩任务，省去中间争抢任务、下载APK、试玩任务等繁琐耗时流程
 
 <img src="before1.png" width = "48%" />
- == <img src="before2.png" width = "48%" />
+ <img src="before2.png" width = "48%" />
  
 
 ## 破解深入分析
