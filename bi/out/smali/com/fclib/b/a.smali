@@ -21,6 +21,10 @@
     .locals 3
 
     :try_start_0
+	
+	const-string v0, "jackzhous"
+	invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     new-instance v0, Ljavax/crypto/spec/DESKeySpec;
 
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B

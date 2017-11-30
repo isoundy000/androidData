@@ -138,6 +138,15 @@ __插入一个小点，抓包工具Windows上建议使用Fiddler，Mac系统上�
 
 ![encode](encode.png)
 
+加入调试代码
+
+![code1](code.png)
+
+打印输出调试信息
+
+
+
+
 至此，已经弄清楚这个争抢rob任务的接口、参数以及加密方式了
 
 ```java
