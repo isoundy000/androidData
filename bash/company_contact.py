@@ -49,6 +49,7 @@ def network(url, header):
 	request.add_header('Cookie', header)
 	response = urllib2.urlopen(request)
 	value = json.loads(response.read())
+	print value
 	value = value['data']
 	return value
 
