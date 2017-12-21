@@ -29,6 +29,8 @@
 
 [proc/pid/maps文件详解][14]
 
+[android方法数超过65535原理][15]以及[编译运行时的状态][16]
+
 [1]:https://mp.weixin.qq.com/s?__biz=MzI2OTQxMTM4OQ==&mid=2247485000&idx=1&sn=2d74c597c62c9c4229f79cce9587b6bf&chksm=eae1f31add967a0cddf98dd3bbf529b50420bbf7a9cb6b238e6e6fe993c8bd8ba5cca728e0da#rd
 [2]:https://yq.aliyun.com/articles/71687
 [3]:https://androidtest.org/android-graphics-performance-pattens/
@@ -43,3 +45,5 @@
 [12]:http://www.wjdiankong.cn/android%E9%80%86%E5%90%91%E4%B9%8B%E6%97%85-soelf%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/
 [13]:https://www.52pojie.cn/
 [14]:http://blog.csdn.net/lijzheng/article/details/23618365
+[15]:http://blog.csdn.net/shensky711/article/details/52329035
+[16]:https://mp.weixin.qq.com/s?__biz=MjM5OTE4ODgzMw==&mid=2247483766&idx=1&sn=3ab423d9a16824f4c4252c3fb3fdb8d2&chksm=a73e01789049886e8ecec45a5b3a4f6132faf3f953e79a6d5717360dc91314d74a3589766efe#rd
