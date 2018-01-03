@@ -33,6 +33,10 @@
 
 [图片压缩][17]
 
+[ARM汇编子程序参数传递][18]
+
+[android动态调试SO][19]
+
 [1]:https://mp.weixin.qq.com/s?__biz=MzI2OTQxMTM4OQ==&mid=2247485000&idx=1&sn=2d74c597c62c9c4229f79cce9587b6bf&chksm=eae1f31add967a0cddf98dd3bbf529b50420bbf7a9cb6b238e6e6fe993c8bd8ba5cca728e0da#rd
 [2]:https://yq.aliyun.com/articles/71687
 [3]:https://androidtest.org/android-graphics-performance-pattens/
@@ -50,3 +54,5 @@
 [15]:http://blog.csdn.net/shensky711/article/details/52329035
 [16]:https://mp.weixin.qq.com/s?__biz=MjM5OTE4ODgzMw==&mid=2247483766&idx=1&sn=3ab423d9a16824f4c4252c3fb3fdb8d2&chksm=a73e01789049886e8ecec45a5b3a4f6132faf3f953e79a6d5717360dc91314d74a3589766efe#rd
 [17]:https://mp.weixin.qq.com/s/-ixGY5E34Fbsy0N3-XTk-Q
+[18]:http://blog.csdn.net/fivedoumi/article/details/50446493
+[19]:http://blog.csdn.net/class_brick/article/details/73526410
